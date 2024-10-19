@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CsvSrc_Stage"
   DTS:PackageType="5"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{43A2A946-8367-4759-B0D5-403F51E26E25}">
+  DTS:VersionBuild="161"
+  DTS:VersionGUID="{E5AEA939-107F-4A55-AAD3-20F626D3F16C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -41,7 +41,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{FF8EA3F5-0DF5-49E1-B351-E4A1AA1C2AB1}"
+              DTS:DTSID="{81DCAC02-4DF6-40DF-982E-426DB32DBBCF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{F36BB720-2A29-4475-860C-AB47AE68C46E}"
+              DTS:DTSID="{5B289D9D-2724-47B0-860A-839E8A2B4A6D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{280F82EC-CDF5-4B08-AB13-39B9EA9FC42F}"
+              DTS:DTSID="{36E75233-9584-40E0-99BE-7A647EC4021B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{9D30380B-DBE3-44D2-B103-4365C473165E}"
+              DTS:DTSID="{97177BF6-D0A3-4880-978B-51383B127B86}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +77,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{D1B58849-2E90-4FCC-9629-B7C51A380CD7}"
+              DTS:DTSID="{29467D27-3E69-421E-8521-31515D2FAC41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +86,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{60BD9BC4-614F-4C23-A8DE-187A9316ACD6}"
+              DTS:DTSID="{21958562-967D-4C3E-9589-71BF80C07CE9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +95,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{CA64B5BF-82C1-466B-A8D4-B1B3E54AE944}"
+              DTS:DTSID="{82405B04-A329-4110-987F-A5CF88D36C27}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,7 +104,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{DCCEAC32-A90F-4D7E-A777-4E5288C85BBF}"
+              DTS:DTSID="{07F8E96E-0B47-4718-A9F3-1AFAE8090301}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,7 +113,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{EE646C82-BEE7-4206-B5F1-59ADAA2656BF}"
+              DTS:DTSID="{6D89DFD5-55F2-488D-8267-2ADC9D060C7C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +122,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{CB417ADF-4C72-49BD-BED6-1ACD79CC0384}"
+              DTS:DTSID="{C32BB617-2F84-484E-AB37-312F3DA70418}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,7 +131,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{2E997492-6573-49A2-8304-ED226E789B3F}"
+              DTS:DTSID="{1B3CCB2A-67E2-4315-90E5-2BB3EFEF44B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +140,107 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{F4C53EDA-26C9-4253-ADE6-EE016EBDB3EA}"
+              DTS:DTSID="{50B33F48-9A68-439C-96CD-601EF78460C2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[2b_uscounties]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BE3447FA-5C86-400F-BAD1-2631E6C3F106}"
+      DTS:ObjectName="2b_uscounties">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\faith\OneDrive\Desktop\AirQuality_BI\ISBI_AirQualityDW\Data\(2B)uscounties.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{FF6570F5-9649-497F-8DDC-1D749A0A7E79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_ascii"
+              DTS:DTSID="{2D70A7D6-A723-488A-9CB2-FA46205C5DB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_full"
+              DTS:DTSID="{BCBF85A6-1B4D-4CB5-BCC5-165E79EA7AA7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_fips"
+              DTS:DTSID="{2AE73186-C848-4C31-8428-E16FDBF3A8CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_id"
+              DTS:DTSID="{DC79E53C-4D83-49BA-8EE2-3BB62353385D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_name"
+              DTS:DTSID="{B6A25643-1A7E-4652-BAB4-FF714F0E745A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lat"
+              DTS:DTSID="{A8A0267E-545C-47D0-B0B2-631CB795F3F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lng"
+              DTS:DTSID="{8D3770BD-17C5-4173-8A71-B720A5D2678B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="population"
+              DTS:DTSID="{055874A3-7D2C-4ACF-97E7-FCF24D8E4FE4}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -159,6 +259,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.21BI11_METADATA 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6E599159-0CBE-4555-BACD-801340F519BF}"
+      DTS:ObjectName="LocalHost.21BI11_METADATA 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_METADATA;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-CsvSrc_Stage-{6E599159-0CBE-4555-BACD-801340F519BF}LocalHost.21BI11_METADATA 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.21BI11_STAGE]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{6F7374B6-C375-4FB2-82CE-F165116C7586}"
@@ -168,6 +280,18 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Src_Stage-{6F7374B6-C375-4FB2-82CE-F165116C7586}LocalHost.21BI11_STAGE;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.21BI11_STAGE 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{87306745-A01C-4F6F-BE05-937035361AE9}"
+      DTS:ObjectName="LocalHost.21BI11_STAGE 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_STAGE;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-CsvSrc_Stage-{87306745-A01C-4F6F-BE05-937035361AE9}LocalHost.21BI11_STAGE 1;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -215,7 +339,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9CEA5A39-767D-45A5-B683-A1355C1F3C4C}"
+          SQLTask:Connection="{6E599159-0CBE-4555-BACD-801340F519BF}"
           SQLTask:SqlStatementSource="SELECT LSET, GETDATE() 'CET' FROM [dbo].[STAGE]&#xA;WHERE TABNAME='10_STATE_AQI'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -242,7 +366,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="D:\Hcmus\4. FourthYear\ISBI_AirQualityDW\Data\Air_Quality_Data" />
+              Folder="C:\Users\faith\OneDrive\Desktop\AirQuality_BI\ISBI_AirQualityDW\Data\Air_Quality_Data" />
             <FEFEProperty
               FileSpec="*.csv" />
             <FEFEProperty
@@ -1089,8 +1213,8 @@
                   <connections>
                     <connection
                       refId="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_STAGE]"
-                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_STAGE]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_STAGE 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_STAGE 1]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1317,8 +1441,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{56FE8E5F-3167-41DF-AD38-C019615E764B}"
-          DTS:ObjectName="{56FE8E5F-3167-41DF-AD38-C019615E764B}"
+          DTS:DTSID="{B2F37A62-D43F-4961-A8F2-5FDF40EEDB91}"
+          DTS:ObjectName="{B2F37A62-D43F-4961-A8F2-5FDF40EEDB91}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::CurCsv" />
       </DTS:ForEachVariableMappings>
@@ -1336,7 +1460,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{6F7374B6-C375-4FB2-82CE-F165116C7586}"
+          SQLTask:Connection="{87306745-A01C-4F6F-BE05-937035361AE9}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[10_STATE_AQI]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1353,7 +1477,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9CEA5A39-767D-45A5-B683-A1355C1F3C4C}"
+          SQLTask:Connection="{6E599159-0CBE-4555-BACD-801340F519BF}"
           SQLTask:SqlStatementSource="UPDATE [dbo].STAGE SET LSET=? &#xA;WHERE TABNAME='10_STATE_AQI'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
@@ -1376,7 +1500,9 @@
       DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6E599159-0CBE-4555-BACD-801340F519BF}"
+          SQLTask:SqlStatementSource="SELECT LSET, GETDATE() 'CET' FROM [dbo].[STAGE]&#xA;WHERE TABNAME='2B_USCOUNTIES'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1398,6 +1524,7 @@
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
+              localeId="1033"
               name="(2B)uscounties"
               usesDispositions="true"
               version="1">
@@ -1414,20 +1541,280 @@
               <connections>
                 <connection
                   refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[2b_uscounties]"
+                  connectionManagerRefId="Package.ConnectionManagers[2b_uscounties]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
                   refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county]"
+                      name="county"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county_ascii]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_ascii]"
+                      name="county_ascii"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county_full]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_full]"
+                      name="county_full"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county_fips]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_fips]"
+                      name="county_fips"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[state_id]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_id]"
+                      name="state_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_name]"
+                      name="state_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[lat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[lat]"
+                      name="lat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[lng]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[lng]"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[lng]"
+                      name="lng"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[population]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[population]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[population]"
+                      name="population"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_ascii" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_full" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_fips" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_id" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_name" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lat" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[lng]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lng" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].ExternalColumns[population]"
+                      dataType="i4"
+                      name="population" />
+                  </externalMetadataColumns>
                 </output>
                 <output
                   refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
                     <outputColumn
                       refId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1467,6 +1854,74 @@
                   exclusionGroup="1"
                   name="Derived Column Output"
                   synchronousInputId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[CREATED]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[CREATED]"
+                      name="CREATED"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[LAST_UPDATED]"
+                      name="LAST_UPDATED"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[STATUS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[STATUS]"
+                      name="STATUS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -1495,6 +1950,221 @@
               </outputs>
             </component>
             <component
+              refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input].Columns[state_id_truncated]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="state_id_truncated"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output].Columns[state_id_truncated]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input].Columns[county_ascii]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_ascii"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_ascii]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input].Columns[county_full]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_full"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_full]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input].Columns[state_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_name"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_name]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input].Columns[population]"
+                      cachedDataType="i4"
+                      cachedName="population"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[population]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county]"
+                      name="Copy of county"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_ascii]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_ascii]"
+                      name="Copy of county_ascii"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_ascii]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_full]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_full]"
+                      name="Copy of county_full"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_full]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state_name]"
+                      name="Copy of state_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state_id]"
+                      name="Copy of state_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output].Columns[state_id_truncated]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of population]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of population]"
+                      name="Copy of population"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[population]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1510,7 +2180,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[2B_USCOUNTIES]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1553,6 +2223,8 @@
               <connections>
                 <connection
                   refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_STAGE 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_STAGE 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1563,8 +2235,149 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CREATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATED"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATED]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[CREATED]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LAST_UPDATED"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAST_UPDATED]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[LAST_UPDATED]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of county]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of county"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of county_ascii]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of county_ascii"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_ASCII]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_ascii]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of county_full]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of county_full"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_FULL]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_full]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of state_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of state_name"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_NAME]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state_name]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[county_fips_truncated]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="county_fips_truncated"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_FIPS]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output].Columns[county_fips_truncated]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of state_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="Copy of state_id"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_ID]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state_id]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lat"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAT]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[lat]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lng]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lng"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LNG]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[lng]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of population]"
+                      cachedDataType="i4"
+                      cachedName="Copy of population"
+                      externalMetadataColumnId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[POPULATION]"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of population]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY]"
+                      dataType="wstr"
+                      length="150"
+                      name="COUNTY" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_ASCII]"
+                      dataType="wstr"
+                      length="150"
+                      name="COUNTY_ASCII" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_FULL]"
+                      dataType="wstr"
+                      length="150"
+                      name="COUNTY_FULL" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_FIPS]"
+                      dataType="wstr"
+                      length="5"
+                      name="COUNTY_FIPS" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="STATE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_NAME]"
+                      dataType="wstr"
+                      length="150"
+                      name="STATE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAT]"
+                      dataType="r8"
+                      name="LAT" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LNG]"
+                      dataType="r8"
+                      name="LNG" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[POPULATION]"
+                      dataType="i4"
+                      name="POPULATION" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATED]"
+                      dataType="dbTimeStamp"
+                      name="CREATED" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      name="LAST_UPDATED" />
+                    <externalMetadataColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      dataType="i4"
+                      name="STATUS" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -1592,16 +2405,139 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Truncated Data"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Inputs[Derived Column Input].Columns[county_fips]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_fips"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_fips]" />
+                    <inputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Inputs[Derived Column Input].Columns[state_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_id"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output].Columns[state_id_truncated]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output].Columns[state_id_truncated]"
+                      name="state_id_truncated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[state_id]},1,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(state_id,1,2)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output].Columns[county_fips_truncated]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output].Columns[county_fips_truncated]"
+                      name="county_fips_truncated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output].Columns[county_fips]},1,5)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(county_fips,1,5)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
+            <path
+              refId="Package\2B_USCOUNTIES - TO STAGE.Paths[Data Conversion Output]"
+              endId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\2B_USCOUNTIES - TO STAGE.Paths[Derived Column Output]"
               endId="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Outputs[Derived Column Output]" />
             <path
+              refId="Package\2B_USCOUNTIES - TO STAGE.Paths[Derived Column Output1]"
+              endId="Package\2B_USCOUNTIES - TO STAGE\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Outputs[Derived Column Output]" />
+            <path
               refId="Package\2B_USCOUNTIES - TO STAGE.Paths[Flat File Source Output]"
-              endId="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns.Inputs[Derived Column Input]"
+              endId="Package\2B_USCOUNTIES - TO STAGE\Truncated Data.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties.Outputs[Flat File Source Output]" />
           </paths>
@@ -1620,7 +2556,9 @@
       DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{87306745-A01C-4F6F-BE05-937035361AE9}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[2B_USCOUNTIES]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1635,7 +2573,16 @@
       DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6E599159-0CBE-4555-BACD-801340F519BF}"
+          SQLTask:SqlStatementSource="UPDATE [dbo].STAGE SET LSET=? &#xA;WHERE TABNAME='2B_USCOUNTIES'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::CET"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1704,7 +2651,7 @@
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\10_STATE_AQI - GET LSET, CET"
-          TopLeft="39.5,5.49999999999995" />
+          TopLeft="96.6428572644993,6.26470588168259" />
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE"
@@ -1715,29 +2662,45 @@
           PanelSize="224.8,102.4"
           Size="224.8,145.6"
           Id="Package\10_STATE_AQI - LOOP CSVs"
-          TopLeft="11.9333349269296,208.7" />
+          TopLeft="70.5047636230414,149.052941228753" />
         <NodeLayout
           Size="218.4,41.6"
           Id="Package\10_STATE_AQI - TRUNCATE"
-          TopLeft="12.7,107.1" />
+          TopLeft="72.7000001277243,78.8058823777421" />
         <NodeLayout
-          Size="232.8,41.6"
+          Size="226.4,41.6"
           Id="Package\10_STATE_AQI - UPDATE LSET"
-          TopLeft="5.50000000000004,414.3" />
+          TopLeft="63.3571429803055,334.005882423322" />
+        <NodeLayout
+          Size="250.4,41.6"
+          Id="Package\2B_USCOUNTIES - GET LSET, CET"
+          TopLeft="411.666644174193,10.3999999276797" />
+        <NodeLayout
+          Size="226.4,41.6"
+          Id="Package\2B_USCOUNTIES - TO STAGE"
+          TopLeft="422.499976915619,190.666665340795" />
+        <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\2B_USCOUNTIES - TRUNCATE"
+          TopLeft="418.333310476609,100.533332634237" />
+        <NodeLayout
+          Size="244.8,41.6"
+          Id="Package\2B_USCOUNTIES - UPDATE LSET"
+          TopLeft="414.166644037599,299.999998553594" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="121.9,47.1">
+          TopLeft="180.471428696112,47.8647058816826">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,30.9411764960595"
               Start="0,0"
-              End="0,52.5">
+              End="0,23.4411764960595">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,23.4411764960595" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1748,18 +2711,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="123.116667463465,148.7">
+          TopLeft="182.402381875383,120.405882377742">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,28.6470588510114"
               Start="0,0"
-              End="0,52.5">
+              End="0,21.1470588510114">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,21.1470588510114" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1770,18 +2733,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="123.116667463465,354.3">
+          TopLeft="179.730953301673,294.652941228753">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,39.352941194569"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,31.852941194569">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,31.852941194569" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1790,28 +2753,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="250.4,41.6"
-          Id="Package\2B_USCOUNTIES - GET LSET, CET"
-          TopLeft="411.666644174193,10.3999999276797" />
-        <NodeLayout
-          Size="230.4,41.6"
-          Id="Package\2B_USCOUNTIES - TRUNCATE"
-          TopLeft="418.333310476609,100.533332634237" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="535.199977325401,51.9999999276797">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.5333327065574"
+              EndConnector="0,48.5333327065573"
               Start="0,0"
-              End="0,41.0333327065574">
+              End="0,41.0333327065573">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.0333327065574" />
+                    End="0,41.0333327065573" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1820,10 +2775,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="226.4,41.6"
-          Id="Package\2B_USCOUNTIES - TO STAGE"
-          TopLeft="422.499976915619,190.666665340795" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="534.616643696114,142.133332634237">
@@ -1846,10 +2797,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="244.8,41.6"
-          Id="Package\2B_USCOUNTIES - UPDATE LSET"
-          TopLeft="414.166644037599,299.999998553594" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="536.133310476609,232.266665340795">
@@ -1885,7 +2832,7 @@
           Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE\Flat File Source"
           TopLeft="19.0714283762943,27.7857141307422" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="154.4,41.6"
           Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE\Conditional Split"
           TopLeft="197.038085253726,24.1476196244594" />
         <NodeLayout
@@ -1896,9 +2843,13 @@
           Size="171.2,41.6"
           Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE\OLE DB Destination"
           TopLeft="188.833323316442,239.728571919316" />
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE\Add STATUS column"
+          TopLeft="188.333323043254,168.999998824795" />
         <EdgeLayout
           Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE.Paths[isNewData]"
-          TopLeft="274.552370928985,65.7476196244594">
+          TopLeft="274.752370928985,65.7476196244594">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1926,40 +2877,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="26.766656877432,0"
+              EndConnector="26.7666568774317,0"
               Start="0,0"
-              End="19.266656877432,0">
+              End="19.2666568774317,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="19.266656877432,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE\Add STATUS column"
-          TopLeft="188.333323043254,168.999998824795" />
-        <EdgeLayout
-          Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE.Paths[Data Conversion Output]"
-          TopLeft="275.999989823749,140.728572190517">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.271426634278"
-              Start="0,0"
-              End="0,20.771426634278">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.771426634278" />
+                    End="19.2666568774317,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1990,6 +2915,28 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\10_STATE_AQI - LOOP CSVs\10_STATE_AQI - TO STAGE.Paths[Data Conversion Output]"
+          TopLeft="275.999989823749,140.728572190517">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.271426634278"
+              Start="0,0"
+              End="0,20.771426634278">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.771426634278" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -2010,29 +2957,41 @@
     design-time-name="Package\2B_USCOUNTIES - TO STAGE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\2B_USCOUNTIES - TO STAGE\Truncated Data"
+          TopLeft="102.142857360292,146.823529283068" />
+        <NodeLayout
+          Size="334.4,41.6"
+          Id="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns"
+          TopLeft="20.3809520894169,321.607839578266" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\2B_USCOUNTIES - TO STAGE\Data Conversion"
+          TopLeft="103.428569911693,233.49019392902" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination"
+          TopLeft="431.761898437628,324.568623880046" />
         <NodeLayout
           Size="148,41.6"
           Id="Package\2B_USCOUNTIES - TO STAGE\(2B)uscounties"
-          TopLeft="99.999998509884,57.9999991357327" />
-        <NodeLayout
-          Size="344.8,41.6"
-          Id="Package\2B_USCOUNTIES - TO STAGE\Add CREATED, LAST_UPDATED, and STATUS columns"
-          TopLeft="320.999995216727,62.9999990612269" />
+          TopLeft="104.095236568426,56.6666658222676" />
         <EdgeLayout
           Id="Package\2B_USCOUNTIES - TO STAGE.Paths[Flat File Source Output]"
-          TopLeft="247.999998509884,81.2999990984798">
+          TopLeft="177.919046964359,98.2666658222676">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.9999967068434,0"
+              EndConnector="0,48.5568634608007"
               Start="0,0"
-              End="65.4999967068434,0">
+              End="0,41.0568634608007">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="65.4999967068434,0" />
+                    End="0,41.0568634608007" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2041,24 +3000,64 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination"
-          TopLeft="412.99999384582,159.999997615814" />
         <EdgeLayout
-          Id="Package\2B_USCOUNTIES - TO STAGE.Paths[Derived Column Output]"
-          TopLeft="495.999994531274,104.599999061227">
+          Id="Package\2B_USCOUNTIES - TO STAGE.Paths[Derived Column Output1]"
+          TopLeft="179.385713635993,188.423529283068">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.3999985545874"
+              EndConnector="0,45.0666646459519"
               Start="0,0"
-              End="0,47.8999985545874">
+              End="0,37.5666646459519">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.8999985545874" />
+                    End="0,37.5666646459519" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2B_USCOUNTIES - TO STAGE.Paths[Derived Column Output]"
+          TopLeft="354.780952089417,343.888231729156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.9809463482114,0"
+              Start="0,0"
+              End="69.4809463482114,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="69.4809463482114,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2B_USCOUNTIES - TO STAGE.Paths[Data Conversion Output]"
+          TopLeft="184.304761000555,275.09019392902">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.5176456492462"
+              Start="0,0"
+              End="0,39.0176456492462">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.0176456492462" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2070,5 +3069,18 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\2B_USCOUNTIES - TO STAGE\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
