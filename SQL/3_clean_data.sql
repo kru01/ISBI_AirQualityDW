@@ -1,8 +1,13 @@
-/* Duplicate rows
+/* Duplicate rows and trailing spaces
  */
+-- There are trailing whitespaces in certain columns of 10_STATE_AQI.
+--  Specifically, all COUNTY_NAMEs of the state Alaska.
+-- For good measure, we will be trimming every NVARCHAR columns.
+--  The process will be handled in SSIS.
+
 -- 194964 distinct rows over 194971 rows.
 SELECT * FROM [21BI11_STAGE].[dbo].[10_STATE_AQI]
-SELECT DISTINCT STATE_NAME, COUNTY_NAME, STATE_CODE, COUNTY_CODE, [DATE],
+SELECT DISTINCT STATE_CODE, COUNTY_CODE, [DATE],
     AQI, CATEGORY, DEFINING_PARAMETER, DEFINING_SITE,
     NUMBER_OF_SITES_REPORTING, CREATED, LAST_UPDATED
 FROM [21BI11_STAGE].[dbo].[10_STATE_AQI]
@@ -16,7 +21,7 @@ WHERE STATE_CODE=51 AND COUNTY_CODE=61 AND [DATE]='2022-03-29'
 
 -- NO duplication for 2B_USCOUNTIES.
 SELECT * FROM [21BI11_STAGE].[dbo].[2B_USCOUNTIES]
-SELECT DISTINCT * FROM [21BI11_STAGE].dbo.[2B_USCOUNTIES]
+SELECT DISTINCT STATE_ID, COUNTY_FIPS FROM [21BI11_STAGE].dbo.[2B_USCOUNTIES]
 
 /* Mismatches
  */
@@ -67,6 +72,10 @@ SET COUNTY_NAME='Bristol' WHERE STATE_CODE=51 AND COUNTY_CODE=520
 
 --  Country of Mexico is not a state of the US so all its entries will be
 --    removed during ETL to the NDS.
+--  There is 1472 Mexico rows, so the final result should be,
+--    194964 - 1472 = 193492.
+SELECT * FROM [21BI11_STAGE].[dbo].[10_STATE_AQI] WHERE STATE_CODE=80
+
 --  However, Virgin Islands is certainly in the US so we consider manually
 --    creating data for it in the USCOUNTIES list, otherwise its AQI data
 --    might be lost, and our estimate for US's air quality would be skewed.
@@ -81,7 +90,14 @@ SET COUNTY_NAME='Bristol' WHERE STATE_CODE=51 AND COUNTY_CODE=520
 --      + https://latitude.to/map/vi/virgin-islands-us/cities/st-croix
 --      + https://latitude.to/articles-by-country/vi/virgin-islands-us/4260/saint-john-us-virgin-islands
 INSERT INTO [21BI11_STAGE].[dbo].[2B_USCOUNTIES] VALUES
-    ('St Croix', 'St Croix', 'St. Croix County', '78010', 'VI', 'Virgin Islands', 17.7275, -64.747, 41004, GETDATE(), GETDATE(), 5),
-    ('St John', 'St John', 'St. John County', '78020', 'VI', 'Virgin Islands', 18.3333, -64.7333, 3881, GETDATE(), GETDATE(), 5)
+    ('St. Croix', 'St. Croix', 'St. Croix County', '78010', 'VI', 'Virgin Islands', 17.7275, -64.747, 41004, GETDATE(), GETDATE(), 5),
+    ('St. John', 'St. John', 'St. John County', '78020', 'VI', 'Virgin Islands', 18.3333, -64.7333, 3881, GETDATE(), GETDATE(), 5)
+
+--  The current ones are "St Croix" and "St John", so alter to "St." for
+--    conformity.
+UPDATE [21BI11_STAGE].[dbo].[10_STATE_AQI]
+SET COUNTY_NAME='St. Croix' WHERE STATE_CODE=78 AND COUNTY_CODE=10
+UPDATE [21BI11_STAGE].[dbo].[10_STATE_AQI]
+SET COUNTY_NAME='St. John' WHERE STATE_CODE=78 AND COUNTY_CODE=20
 
 GO
