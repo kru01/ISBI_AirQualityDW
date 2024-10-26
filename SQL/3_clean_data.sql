@@ -1,3 +1,21 @@
+/* 10_STATE_AQI's inconsistent DATE format
+ */
+-- 2023 entries have a format of DD-MM-YYYY, while the rest is
+--  YYYY-MM-DD.
+SELECT * FROM [21BI11_STAGE].dbo.[10_STATE_AQI]
+WHERE SOURCE_ID=3
+
+UPDATE [21BI11_STAGE].dbo.[10_STATE_AQI]
+SET [DATE] = CONCAT(SUBSTRING([DATE], 7, 4), SUBSTRING([DATE], 3, 4),
+    SUBSTRING([DATE], 1, 2))
+WHERE [DATE] LIKE '__-__-____'
+
+-- We can even make sure by checking if all DATE and CREATED now
+--  align with each other. (There should be an error if this was
+--  run before the above UPDATE).
+SELECT * FROM [21BI11_STAGE].dbo.[10_STATE_AQI]
+WHERE [DATE] != CONVERT(date, CREATED)
+
 /* Duplicate rows and trailing spaces
  */
 -- There are trailing whitespaces in certain columns of 10_STATE_AQI.

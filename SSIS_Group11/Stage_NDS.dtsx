@@ -12,8 +12,8 @@
   DTS:ObjectName="Stage_NDS"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="109"
-  DTS:VersionGUID="{3BC8A7E0-40EA-4A7C-8E5B-937BA2717065}">
+  DTS:VersionBuild="114"
+  DTS:VersionGUID="{E46B4CEB-D6A5-4D58-8C01-73EFEBD3F478}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -186,7 +186,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[AIR_QUALITY]) [refTable]
-where [refTable].[COUNTY_ID] = ? and [refTable].[DATE] = ? and [refTable].[DEFINING_PARAMETER] = ?</property>
+where [refTable].[DEFINING_PARAMETER] = ? and [refTable].[DATE] = ? and [refTable].[COUNTY_ID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -222,7 +222,7 @@ where [refTable].[COUNTY_ID] = ? and [refTable].[DATE] = ? and [refTable].[DEFIN
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\AIR_QUALITY - TO NDS\356:invalid};#{Package\AIR_QUALITY - TO NDS\358:invalid};#{Package\AIR_QUALITY - TO NDS\364:invalid};</property>
+                  name="ParameterMap">#{Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DEFINING_PARAMETER]};#{Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE_DB]};#{Package\AIR_QUALITY - TO NDS\Lookup COUNTY_ID from STATE_NAME and COUNTY.Outputs[Lookup Match Output].Columns[COUNTY_ID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -262,23 +262,6 @@ where [refTable].[COUNTY_ID] = ? and [refTable].[DATE] = ? and [refTable].[DEFIN
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists.Inputs[Lookup Input].Columns[DATE]"
-                      cachedDataType="dbDate"
-                      cachedName="DATE"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">DATE</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists.Inputs[Lookup Input].Columns[DEFINING_PARAMETER]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -290,6 +273,22 @@ where [refTable].[COUNTY_ID] = ? and [refTable].[DATE] = ? and [refTable].[DEFIN
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
                           name="JoinToReferenceColumn">DEFINING_PARAMETER</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists.Inputs[Lookup Input].Columns[DATE_DB]"
+                      cachedDataType="dbDate"
+                      cachedName="DATE_DB"
+                      lineageId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE_DB]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">DATE</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -619,13 +618,6 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                       externalMetadataColumnId="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_ID]"
                       lineageId="Package\AIR_QUALITY - TO NDS\Lookup COUNTY_ID from STATE_NAME and COUNTY.Outputs[Lookup Match Output].Columns[COUNTY_ID]" />
                     <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY.Inputs[OLE DB Destination Input].Columns[DATE]"
-                      cachedDataType="dbDate"
-                      cachedName="DATE"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[DATE]"
-                      lineageId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE]" />
-                    <inputColumn
                       refId="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY.Inputs[OLE DB Destination Input].Columns[AQI]"
                       cachedDataType="i4"
                       cachedName="AQI"
@@ -681,6 +673,12 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                       cachedName="LAST_UPDATED"
                       externalMetadataColumnId="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[LAST_UPDATED]"
                       lineageId="Package\AIR_QUALITY - TO NDS\Add CREATED and LAST_UPDATED cols.Outputs[Derived Column Output].Columns[LAST_UPDATED]" />
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY.Inputs[OLE DB Destination Input].Columns[DATE_DB]"
+                      cachedDataType="dbDate"
+                      cachedName="DATE_DB"
+                      externalMetadataColumnId="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[DATE]"
+                      lineageId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE_DB]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -818,7 +816,8 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Inputs[Sort Input].Columns[DATE]"
-                      cachedDataType="dbDate"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="DATE"
                       lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]">
                       <properties>
@@ -931,6 +930,22 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Inputs[Sort Input].Columns[DATE_DB]"
+                      cachedDataType="dbDate"
+                      cachedName="DATE_DB"
+                      lineageId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -975,7 +990,8 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE]"
                       name="DATE"
                       sortKeyPosition="3">
@@ -1073,6 +1089,19 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                           name="SortColumnId">#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[SOURCE_ID]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE_DB]"
+                      dataType="dbDate"
+                      lineageId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Outputs[Sort Output].Columns[DATE_DB]"
+                      name="DATE_DB">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1161,10 +1190,11 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]"
-                      dataType="dbDate"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].ExternalColumns[DATE]"
+                      length="50"
                       lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]"
                       name="DATE"
                       truncationRowDisposition="FailComponent" />
@@ -1248,7 +1278,8 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                       name="COUNTY_CODE" />
                     <externalMetadataColumn
                       refId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].ExternalColumns[DATE]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="50"
                       name="DATE" />
                     <externalMetadataColumn
                       refId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].ExternalColumns[AQI]"
@@ -1306,7 +1337,8 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                       name="COUNTY_NAME" />
                     <outputColumn
                       refId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Error Output].Columns[DATE]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Error Output].Columns[DATE]"
                       name="DATE" />
                     <outputColumn
@@ -1492,6 +1524,12 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                           name="FriendlyExpression">TRIM(DEFINING_SITE)</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input].Columns[DATE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DATE"
+                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1503,6 +1541,30 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                   exclusionGroup="1"
                   name="Derived Column Output"
                   synchronousInputId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]"
+                      name="DATE_DB"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)DATE</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -4669,17 +4731,21 @@ WHERE STATE_ID_SK=?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="342.4,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists"
+          TopLeft="200.282814150107,185.451850896028" />
+        <NodeLayout
           Size="337.6,41.6"
           Id="Package\AIR_QUALITY - TO NDS\Lookup COUNTY_ID from STATE_NAME and COUNTY"
           TopLeft="376.777770165492,94.9501661243537" />
         <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces"
-          TopLeft="254.467991964,21.1851850378661" />
+          Size="293.6,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs"
+          TopLeft="33.8905651708434,95.2094261042183" />
         <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\Add CREATED and LAST_UPDATED cols"
-          TopLeft="382.149472803261,269.718517176987" />
+          Size="196.8,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI"
+          TopLeft="27.7777762600669,22.5501680019" />
         <NodeLayout
           Size="191.2,41.6"
           Id="Package\AIR_QUALITY - TO NDS\UPDATE matching entry"
@@ -4689,51 +4755,55 @@ WHERE STATE_ID_SK=?</property>
           Id="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY"
           TopLeft="695.482789016816,271.733331777519" />
         <NodeLayout
-          Size="342.4,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists"
-          TopLeft="200.282814150107,185.451850896028" />
+          Size="172.8,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces"
+          TopLeft="254.467991964,21.1851850378661" />
         <NodeLayout
-          Size="293.6,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs"
-          TopLeft="33.8905651708434,95.2094261042183" />
-        <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI"
-          TopLeft="27.7777762600669,22.5501680019" />
+          Size="275.2,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\Add CREATED and LAST_UPDATED cols"
+          TopLeft="382.149472803261,269.718517176987" />
         <EdgeLayout
-          Id="Package\AIR_QUALITY - TO NDS.Paths[Lookup Match Output]"
-          TopLeft="315.749480816774,227.051850896028">
+          Id="Package\AIR_QUALITY - TO NDS.Paths[Sort Output]"
+          TopLeft="327.490565170843,115.879796114286">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-87.9999943541161,44.4666662628791"
+              EndConnector="49.2872049946487,0"
               Start="0,0"
-              End="-87.9999943541161,36.9666662628791">
+              End="41.7872049946487,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.9107595272806" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.9107595272806"
-                    Point2="0,17.9107595272806"
-                    Point3="-4,17.9107595272806" />
-                  <mssgle:LineSegment
-                    End="-83.9999943541161,17.9107595272806" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-83.9999943541161,17.9107595272806"
-                    Point2="-87.9999943541161,17.9107595272806"
-                    Point3="-87.9999943541161,21.9107595272806" />
-                  <mssgle:LineSegment
-                    End="-87.9999943541161,36.9666662628791" />
+                    End="41.7872049946487,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-92.1913838958081,22.9107595272806,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AIR_QUALITY - TO NDS.Paths[OLE DB Source Output]"
+          TopLeft="224.577776260067,42.6676765198831">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.8902157039329,0"
+              Start="0,0"
+              End="22.3902157039329,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22.3902157039329,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4773,47 +4843,75 @@ WHERE STATE_ID_SK=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AIR_QUALITY - TO NDS.Paths[Derived Column Output]"
-          TopLeft="657.349472803261,291.525924477253">
+          Id="Package\AIR_QUALITY - TO NDS.Paths[Lookup Match Output1]"
+          TopLeft="545.577770165493,136.550166124354">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38.1333162135559,0"
+              EndConnector="-174.094956015385,48.9016847716746"
               Start="0,0"
-              End="30.6333162135559,0">
+              End="-174.094956015385,41.4016847716746">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="30.6333162135559,0" />
+                    End="0,20.4508423858373" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4508423858373"
+                    Point2="0,24.4508423858373"
+                    Point3="-4,24.4508423858373" />
+                  <mssgle:LineSegment
+                    End="-170.094956015385,24.4508423858373" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-170.094956015385,24.4508423858373"
+                    Point2="-174.094956015385,24.4508423858373"
+                    Point3="-174.094956015385,28.4508423858373" />
+                  <mssgle:LineSegment
+                    End="-174.094956015385,41.4016847716746" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-135.238864726442,29.4508423858373,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AIR_QUALITY - TO NDS.Paths[OLE DB Source Output]"
-          TopLeft="224.577776260067,42.6676765198831">
+          Id="Package\AIR_QUALITY - TO NDS.Paths[Lookup Match Output]"
+          TopLeft="315.749480816774,227.051850896028">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.8902157039329,0"
+              EndConnector="-87.9999943541161,44.4666662628791"
               Start="0,0"
-              End="22.3902157039329,0">
+              End="-87.9999943541161,36.9666662628791">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="22.3902157039329,0" />
+                    End="0,13.9107595272806" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.9107595272806"
+                    Point2="0,17.9107595272806"
+                    Point3="-4,17.9107595272806" />
+                  <mssgle:LineSegment
+                    End="-83.9999943541161,17.9107595272806" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-83.9999943541161,17.9107595272806"
+                    Point2="-87.9999943541161,17.9107595272806"
+                    Point3="-87.9999943541161,21.9107595272806" />
+                  <mssgle:LineSegment
+                    End="-87.9999943541161,36.9666662628791" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-92.1913838958081,22.9107595272806,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4851,19 +4949,19 @@ WHERE STATE_ID_SK=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AIR_QUALITY - TO NDS.Paths[Sort Output]"
-          TopLeft="327.490565170843,115.879796114286">
+          Id="Package\AIR_QUALITY - TO NDS.Paths[Derived Column Output]"
+          TopLeft="657.349472803261,291.525924477253">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="49.2872049946487,0"
+              EndConnector="38.1333162135559,0"
               Start="0,0"
-              End="41.7872049946487,0">
+              End="30.6333162135559,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="41.7872049946487,0" />
+                    End="30.6333162135559,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4872,45 +4970,58 @@ WHERE STATE_ID_SK=?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\AIR_QUALITY - TO NDS.Paths[Lookup Match Output1]"
-          TopLeft="545.577770165493,136.550166124354">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-174.094956015385,48.9016847716746"
-              Start="0,0"
-              End="-174.094956015385,41.4016847716746">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4508423858373" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4508423858373"
-                    Point2="0,24.4508423858373"
-                    Point3="-4,24.4508423858373" />
-                  <mssgle:LineSegment
-                    End="-170.094956015385,24.4508423858373" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-170.094956015385,24.4508423858373"
-                    Point2="-174.094956015385,24.4508423858373"
-                    Point3="-174.094956015385,28.4508423858373" />
-                  <mssgle:LineSegment
-                    End="-174.094956015385,41.4016847716746" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-135.238864726442,29.4508423858373,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[AIR_QUALITY]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\COUNTY - TO NDS">
     <LayoutInfo>
@@ -4929,9 +5040,9 @@ WHERE STATE_ID_SK=?</property>
           Id="Package\COUNTY - TO NDS\Sort by STATE_ID and COUNTY_FIPS, and remove dups from different srcs"
           TopLeft="41.833330888715,179.599998067618" />
         <NodeLayout
-          Size="191.2,41.6"
-          Id="Package\COUNTY - TO NDS\UPDATE matching entry"
-          TopLeft="354.49999024719,323.133330990937" />
+          Size="172.8,41.6"
+          Id="Package\COUNTY - TO NDS\TRIM trailing spaces"
+          TopLeft="95.9999985694884,91.9999986290933" />
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\COUNTY - TO NDS\Merge Join to get STATE_ID_SK"
@@ -4952,6 +5063,34 @@ WHERE STATE_ID_SK=?</property>
           Size="275.2,41.6"
           Id="Package\COUNTY - TO NDS\Add CREATED and LAST_UPDATED cols"
           TopLeft="633.83330557661,247.066664479707" />
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\COUNTY - TO NDS\UPDATE matching entry"
+          TopLeft="354.49999024719,323.133330990937" />
+        <EdgeLayout
+          Id="Package\COUNTY - TO NDS.Paths[Sort Output1]"
+          TopLeft="309.033330888715,200.666665026479">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30.4666601780391,0"
+              Start="0,0"
+              End="22.9666601780391,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22.9666601780391,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\COUNTY - TO NDS.Paths[Sort Output]"
           TopLeft="455.5166522916,137.799999331037">
@@ -4971,7 +5110,33 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\COUNTY - TO NDS.Paths[OLE DB Source Output1]"
+          TopLeft="183.59999728923,60.9666665702396">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.0333320588537"
+              Start="0,0"
+              End="0,23.5333320588537">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5333320588537" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4993,7 +5158,9 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5015,7 +5182,9 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5067,54 +5236,6 @@ WHERE STATE_ID_SK=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\COUNTY - TO NDS.Paths[Derived Column Output]"
-          TopLeft="767.616637437626,288.666664479707">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5333329598768"
-              Start="0,0"
-              End="0,24.0333329598768">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0333329598768" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\COUNTY - TO NDS\TRIM trailing spaces"
-          TopLeft="95.9999985694884,91.9999986290933" />
-        <EdgeLayout
-          Id="Package\COUNTY - TO NDS.Paths[OLE DB Source Output1]"
-          TopLeft="183.59999728923,60.9666665702396">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.0333320588537"
-              Start="0,0"
-              End="0,23.5333320588537">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5333320588537" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\COUNTY - TO NDS.Paths[Derived Column Output1]"
           TopLeft="178.916664729102,133.599998629093">
           <EdgeLayout.Curve>
@@ -5133,29 +5254,33 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\COUNTY - TO NDS.Paths[Sort Output1]"
-          TopLeft="309.033330888715,200.666665026479">
+          Id="Package\COUNTY - TO NDS.Paths[Derived Column Output]"
+          TopLeft="767.616637437626,288.666664479707">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="30.4666601780391,0"
+              EndConnector="0,31.5333329598768"
               Start="0,0"
-              End="22.9666601780391,0">
+              End="0,24.0333329598768">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="22.9666601780391,0" />
+                    End="0,24.0333329598768" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5241,17 +5366,45 @@ WHERE STATE_ID_SK=?</property>
           Id="Package\STATE - TO NDS\Add CREATED and LAST_UPDATED cols"
           TopLeft="456.666641516819,166.533331960705" />
         <NodeLayout
-          Size="346.4,41.6"
-          Id="Package\STATE - TO NDS\UPDATE STATE_NAME, LAST_UPDATED, SOURCE_ID"
-          TopLeft="55.8333300840524,264.466664613022" />
+          Size="172.8,41.6"
+          Id="Package\STATE - TO NDS\TRIM trailing spaces"
+          TopLeft="439.999993443489,91.9999986290932" />
         <NodeLayout
           Size="143.2,41.6"
           Id="Package\STATE - TO NDS\NDS - STATE"
           TopLeft="524.999971116584,270.533331237502" />
         <NodeLayout
+          Size="346.4,41.6"
+          Id="Package\STATE - TO NDS\UPDATE STATE_NAME, LAST_UPDATED, SOURCE_ID"
+          TopLeft="55.8333300840524,264.466664613022" />
+        <NodeLayout
           Size="209.6,41.6"
           Id="Package\STATE - TO NDS\STAGE - 2B_USCOUNTIES"
           TopLeft="92.4999949460229,28.5999998011192" />
+        <EdgeLayout
+          Id="Package\STATE - TO NDS.Paths[Sort Output]"
+          TopLeft="529.416653257691,69.3333331404792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.666665488614"
+              Start="0,0"
+              End="0,15.166665488614">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.166665488614" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\STATE - TO NDS.Paths[OLE DB Source Output]"
           TopLeft="302.099994946023,48.9666664707992">
@@ -5271,7 +5424,9 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5323,54 +5478,6 @@ WHERE STATE_ID_SK=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STATE - TO NDS.Paths[Derived Column Output]"
-          TopLeft="595.433306316701,208.133331960705">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62.399999276797"
-              Start="0,0"
-              End="0,54.899999276797">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.899999276797" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\STATE - TO NDS\TRIM trailing spaces"
-          TopLeft="439.999993443489,91.9999986290932" />
-        <EdgeLayout
-          Id="Package\STATE - TO NDS.Paths[Sort Output]"
-          TopLeft="529.416653257691,69.3333331404792">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.666665488614"
-              Start="0,0"
-              End="0,15.166665488614">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.166665488614" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\STATE - TO NDS.Paths[Derived Column Output1]"
           TopLeft="526.399993443489,133.599998629093">
           <EdgeLayout.Curve>
@@ -5401,7 +5508,33 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STATE - TO NDS.Paths[Derived Column Output]"
+          TopLeft="595.433306316701,208.133331960705">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.399999276797"
+              Start="0,0"
+              End="0,54.899999276797">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.899999276797" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

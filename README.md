@@ -30,7 +30,7 @@
 1. Run scripts in the [SQL](./SQL/) folder in the following order to set up the Data Warehouse.
 
     ```txt
-    1_create_metadata -> 2_create_stage -> 4_create_nds
+    1_create_metadata -> 2_create_stage -> 4_create_nds -> 5_create_dds
     ```
 
     1. The `3_clean_data.sql` must only be run after completing ETL from Source to Stage.

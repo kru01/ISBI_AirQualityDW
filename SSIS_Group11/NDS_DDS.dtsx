@@ -1,0 +1,2870 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/25/2024 10:47:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-0VDG7HL"
+  DTS:CreatorName="DESKTOP-0VDG7HL\GIGABYTE PC"
+  DTS:DTSID="{9D9444BE-96B4-434A-8FEF-1769081F4E1D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="NDS_DDS"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{B1A13376-D8FD-455A-983C-C81D38210CF0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F64C5DEC-D87B-446E-9A37-6B15DCC0A786}"
+      DTS:ObjectName="LocalHost.21BI11_DDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_DDS;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-NDS_DDS-{F64C5DEC-D87B-446E-9A37-6B15DCC0A786}LocalHost.21BI11_DDS;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.21BI11_METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{37FB2D24-0771-4411-BD52-72485A581117}"
+      DTS:ObjectName="LocalHost.21BI11_METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-NDS_DDS-{37FB2D24-0771-4411-BD52-72485A581117}LocalHost.21BI11_METADATA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.21BI11_NDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6C1DA8EE-7C90-4A67-8A20-3DFD1F340C73}"
+      DTS:ObjectName="LocalHost.21BI11_NDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_NDS;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-NDS_DDS-{6C1DA8EE-7C90-4A67-8A20-3DFD1F340C73}LocalHost.21BI11_NDS;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EFDFC401-5A92-4CAB-AE95-0B6C1FA21858}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2000</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F00CB4B2-BAEB-4EE2-9C98-F8246A25FCE5}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2000</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DIM_GEO - TO DDS"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{94CA8D36-B36E-469D-B552-0E31C349506B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DIM_GEO - TO DDS"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add STATUS, and reassign LAST_UPDATED cols"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Inputs[Derived Column Input].Columns[LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LAST_UPDATED"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]} &gt; #{Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[ST_LAST_UPDATED]} ? #{Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]} : #{Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[ST_LAST_UPDATED]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LAST_UPDATED &gt; ST_LAST_UPDATED ? LAST_UPDATED : ST_LAST_UPDATED</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Inputs[Derived Column Input].Columns[ST_LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ST_LAST_UPDATED"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[ST_LAST_UPDATED]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]"
+                      name="STATUS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Derived Column.Inputs[Derived Column Input].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)("0")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)("0")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Derived Column 1.Inputs[Derived Column Input].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATUS]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)("1")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)("1")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Derived Column 1.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\Insert Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_GEO]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM_GEO - TO DDS\Insert Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[STATE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="STATE_ID"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_ID]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[COUNTY_FIPS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="COUNTY_FIPS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_FIPS]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_FIPS]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[STATE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="STATE_NAME"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_NAME]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_NAME]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[COUNTY]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="COUNTY"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[LAT]"
+                      cachedDataType="r8"
+                      cachedName="LAT"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAT]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAT]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[LNG]"
+                      cachedDataType="r8"
+                      cachedName="LNG"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LNG]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LNG]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[POPULATION]"
+                      cachedDataType="i4"
+                      cachedName="POPULATION"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[POPULATION]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[POPULATION]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[CREATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATED"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATED]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[CREATED]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LAST_UPDATED"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAST_UPDATED]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAST_UPDATED]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[SOURCE_ID]"
+                      cachedDataType="i4"
+                      cachedName="SOURCE_ID"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SOURCE_ID]"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[SOURCE_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[GEO_ID]"
+                      dataType="i4"
+                      name="GEO_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_ID]"
+                      dataType="wstr"
+                      length="2"
+                      name="STATE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_FIPS]"
+                      dataType="wstr"
+                      length="5"
+                      name="COUNTY_FIPS" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_NAME]"
+                      dataType="wstr"
+                      length="150"
+                      name="STATE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY]"
+                      dataType="wstr"
+                      length="150"
+                      name="COUNTY" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAT]"
+                      dataType="r8"
+                      name="LAT" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LNG]"
+                      dataType="r8"
+                      name="LNG" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[POPULATION]"
+                      dataType="i4"
+                      name="POPULATION" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATED]"
+                      dataType="dbTimeStamp"
+                      name="CREATED" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      name="LAST_UPDATED" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      dataType="i4"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SOURCE_ID]"
+                      dataType="i4"
+                      name="SOURCE_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="NDS - COUNTY join STATE"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CT.*, ST.STATE_ID, ST.STATE_NAME, ST.LAST_UPDATED 'ST_LAST_UPDATED'
+FROM [dbo].COUNTY CT JOIN [dbo].[STATE] ST
+    ON CT.STATE_ID_SK = ST.STATE_ID_SK
+WHERE (CT.CREATED &gt; ? AND CT.CREATED &lt;= ?)
+    OR (CT.LAST_UPDATED &gt; ? AND CT.LAST_UPDATED &lt;= ?)
+    OR (ST.CREATED &gt; ? AND ST.CREATED &lt;= ?)
+    OR (ST.LAST_UPDATED &gt; ? AND ST.LAST_UPDATED &lt;= ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{F00CB4B2-BAEB-4EE2-9C98-F8246A25FCE5};"Parameter1:Input",{EFDFC401-5A92-4CAB-AE95-0B6C1FA21858};"Parameter2:Input",{F00CB4B2-BAEB-4EE2-9C98-F8246A25FCE5};"Parameter3:Input",{EFDFC401-5A92-4CAB-AE95-0B6C1FA21858};"Parameter4:Input",{F00CB4B2-BAEB-4EE2-9C98-F8246A25FCE5};"Parameter5:Input",{EFDFC401-5A92-4CAB-AE95-0B6C1FA21858};"Parameter6:Input",{F00CB4B2-BAEB-4EE2-9C98-F8246A25FCE5};"Parameter7:Input",{EFDFC401-5A92-4CAB-AE95-0B6C1FA21858};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[COUNTY_ID]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_ID]"
+                      name="COUNTY_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[COUNTY]"
+                      length="150"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY]"
+                      name="COUNTY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[COUNTY_FIPS]"
+                      length="5"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]"
+                      name="COUNTY_FIPS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID_SK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[STATE_ID_SK]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID_SK]"
+                      name="STATE_ID_SK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[POPULATION]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]"
+                      name="POPULATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[LAT]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]"
+                      name="LAT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[LNG]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]"
+                      name="LNG"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[CREATED]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[CREATED]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[CREATED]"
+                      name="CREATED"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[LAST_UPDATED]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]"
+                      name="LAST_UPDATED"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[SOURCE_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[SOURCE_ID]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[SOURCE_ID]"
+                      name="SOURCE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[STATE_ID]"
+                      length="2"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]"
+                      name="STATE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[STATE_NAME]"
+                      length="150"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_NAME]"
+                      name="STATE_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[ST_LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[ST_LAST_UPDATED]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[ST_LAST_UPDATED]"
+                      name="ST_LAST_UPDATED"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[COUNTY_ID]"
+                      dataType="i4"
+                      name="COUNTY_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[COUNTY]"
+                      dataType="wstr"
+                      length="150"
+                      name="COUNTY" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[COUNTY_FIPS]"
+                      dataType="wstr"
+                      length="5"
+                      name="COUNTY_FIPS" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[STATE_ID_SK]"
+                      dataType="i4"
+                      name="STATE_ID_SK" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[POPULATION]"
+                      dataType="i4"
+                      name="POPULATION" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[LAT]"
+                      dataType="r8"
+                      name="LAT" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[LNG]"
+                      dataType="r8"
+                      name="LNG" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[CREATED]"
+                      dataType="dbTimeStamp"
+                      name="CREATED" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      name="LAST_UPDATED" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[SOURCE_ID]"
+                      dataType="i4"
+                      name="SOURCE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[STATE_ID]"
+                      dataType="wstr"
+                      length="2"
+                      name="STATE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[STATE_NAME]"
+                      dataType="wstr"
+                      length="150"
+                      name="STATE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].ExternalColumns[ST_LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      name="ST_LAST_UPDATED" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[COUNTY_ID]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[COUNTY_ID]"
+                      name="COUNTY_ID" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[COUNTY]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[COUNTY]"
+                      name="COUNTY" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[COUNTY_FIPS]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[COUNTY_FIPS]"
+                      name="COUNTY_FIPS" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[STATE_ID_SK]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[STATE_ID_SK]"
+                      name="STATE_ID_SK" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[POPULATION]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[POPULATION]"
+                      name="POPULATION" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[LAT]"
+                      dataType="r8"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[LAT]"
+                      name="LAT" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[LNG]"
+                      dataType="r8"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[LNG]"
+                      name="LNG" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[CREATED]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[CREATED]"
+                      name="CREATED" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[LAST_UPDATED]"
+                      name="LAST_UPDATED" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[SOURCE_ID]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[SOURCE_ID]"
+                      name="SOURCE_ID" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[STATE_ID]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[STATE_ID]"
+                      name="STATE_ID" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[STATE_NAME]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[STATE_NAME]"
+                      name="STATE_NAME" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[ST_LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[ST_LAST_UPDATED]"
+                      name="ST_LAST_UPDATED" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DIM_GEO] SET [STATUS] = ? WHERE [COUNTY_FIPS] = ? AND [STATE_ID] = ? AND [STATUS] = '1'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[COUNTY_FIPS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="COUNTY_FIPS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[STATE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="STATE_ID"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="5"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="wstr"
+                      length="2"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\OLE DB Command 1"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command 1"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DIM_GEO] SET [COUNTY] = ?,[CREATED] = ?,[LAST_UPDATED] = ?,[LAT] = ?,[LNG] = ?,[POPULATION] = ?,[SOURCE_ID] = ?,[STATE_NAME] = ?,[STATUS] = ? WHERE [COUNTY_FIPS] = ? AND [STATE_ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[COUNTY]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="COUNTY"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[COUNTY_FIPS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="COUNTY_FIPS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[CREATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATED"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[CREATED]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LAST_UPDATED"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[LAT]"
+                      cachedDataType="r8"
+                      cachedName="LAT"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[LNG]"
+                      cachedDataType="r8"
+                      cachedName="LNG"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[POPULATION]"
+                      cachedDataType="i4"
+                      cachedName="POPULATION"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[SOURCE_ID]"
+                      cachedDataType="i4"
+                      cachedName="SOURCE_ID"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[SOURCE_ID]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[STATE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="STATE_ID"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[STATE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="STATE_NAME"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_NAME]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="150"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="dbTimeStamp"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="dbTimeStamp"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="r8"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="r8"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="wstr"
+                      length="150"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="i4"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      dataType="wstr"
+                      length="5"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      dataType="wstr"
+                      length="2"
+                      name="Param_10">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\OLE DB Command 2"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command 2"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DIM_GEO] SET [LAT] = ?,[LNG] = ?,[POPULATION] = ? WHERE [COUNTY_FIPS] = ? AND [STATE_ID] = ? AND [STATUS] = '1'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].Columns[COUNTY_FIPS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="COUNTY_FIPS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].Columns[LAT]"
+                      cachedDataType="r8"
+                      cachedName="LAT"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].Columns[LNG]"
+                      cachedDataType="r8"
+                      cachedName="LNG"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].Columns[POPULATION]"
+                      cachedDataType="i4"
+                      cachedName="POPULATION"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]" />
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].Columns[STATE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="STATE_ID"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="r8"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="r8"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="wstr"
+                      length="5"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="wstr"
+                      length="2"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [COUNTY], [COUNTY_FIPS], [LAT], [LNG], [POPULATION], [STATE_ID], [STATE_NAME], [STATUS] FROM [dbo].[DIM_GEO]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere">[STATUS] = '1'</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.21BI11_DDS]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[COUNTY]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="COUNTY"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[COUNTY]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[COUNTY_FIPS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="COUNTY_FIPS"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[COUNTY_FIPS]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[LAT]"
+                      cachedDataType="r8"
+                      cachedName="LAT"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[LAT]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[LNG]"
+                      cachedDataType="r8"
+                      cachedName="LNG"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[LNG]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[POPULATION]"
+                      cachedDataType="i4"
+                      cachedName="POPULATION"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[POPULATION]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[STATE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="STATE_ID"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[STATE_ID]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[STATE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="STATE_NAME"
+                      externalMetadataColumnId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[STATE_NAME]"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_NAME]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[COUNTY]"
+                      dataType="wstr"
+                      length="150"
+                      name="COUNTY" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[COUNTY_FIPS]"
+                      dataType="wstr"
+                      length="5"
+                      name="COUNTY_FIPS" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[LAT]"
+                      dataType="r8"
+                      name="LAT" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[LNG]"
+                      dataType="r8"
+                      name="LNG" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[POPULATION]"
+                      dataType="i4"
+                      name="POPULATION" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[STATE_ID]"
+                      dataType="wstr"
+                      length="2"
+                      name="STATE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[STATE_NAME]"
+                      dataType="wstr"
+                      length="150"
+                      name="STATE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[STATUS]"
+                      dataType="i4"
+                      name="STATUS" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM_GEO - TO DDS\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[COUNTY_ID]"
+                      cachedDataType="i4"
+                      cachedName="COUNTY_ID"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[COUNTY]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="COUNTY"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[COUNTY_FIPS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="COUNTY_FIPS"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_FIPS]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[STATE_ID_SK]"
+                      cachedDataType="i4"
+                      cachedName="STATE_ID_SK"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID_SK]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID_SK]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[POPULATION]"
+                      cachedDataType="i4"
+                      cachedName="POPULATION"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[POPULATION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[LAT]"
+                      cachedDataType="r8"
+                      cachedName="LAT"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAT]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[LNG]"
+                      cachedDataType="r8"
+                      cachedName="LNG"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LNG]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[CREATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATED"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[CREATED]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[CREATED]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LAST_UPDATED"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAST_UPDATED]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[SOURCE_ID]"
+                      cachedDataType="i4"
+                      cachedName="SOURCE_ID"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[SOURCE_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[SOURCE_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[STATE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="STATE_ID"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[STATE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="STATE_NAME"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_NAME]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_NAME]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[ST_LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ST_LAST_UPDATED"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[ST_LAST_UPDATED]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[ST_LAST_UPDATED]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATUS]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[COUNTY_ID]"
+                      cachedDataType="i4"
+                      cachedName="COUNTY_ID"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[COUNTY]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="COUNTY"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[COUNTY_FIPS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="COUNTY_FIPS"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_FIPS]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[STATE_ID_SK]"
+                      cachedDataType="i4"
+                      cachedName="STATE_ID_SK"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID_SK]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID_SK]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[POPULATION]"
+                      cachedDataType="i4"
+                      cachedName="POPULATION"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[POPULATION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[LAT]"
+                      cachedDataType="r8"
+                      cachedName="LAT"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAT]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[LNG]"
+                      cachedDataType="r8"
+                      cachedName="LNG"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LNG]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[CREATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATED"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[CREATED]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[CREATED]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LAST_UPDATED"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAST_UPDATED]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[SOURCE_ID]"
+                      cachedDataType="i4"
+                      cachedName="SOURCE_ID"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[SOURCE_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[SOURCE_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[STATE_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="STATE_ID"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[STATE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="STATE_NAME"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_NAME]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_NAME]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[ST_LAST_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ST_LAST_UPDATED"
+                      lineageId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[ST_LAST_UPDATED]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[ST_LAST_UPDATED]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2].Columns[STATUS]"
+                      cachedDataType="i4"
+                      cachedName="STATUS"
+                      lineageId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATUS]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_ID]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_ID]"
+                      name="COUNTY_ID" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY]"
+                      name="COUNTY" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_FIPS]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[COUNTY_FIPS]"
+                      name="COUNTY_FIPS" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID_SK]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID_SK]"
+                      name="STATE_ID_SK" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[POPULATION]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[POPULATION]"
+                      name="POPULATION" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAT]"
+                      dataType="r8"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAT]"
+                      name="LAT" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LNG]"
+                      dataType="r8"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LNG]"
+                      name="LNG" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[CREATED]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[CREATED]"
+                      name="CREATED" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[LAST_UPDATED]"
+                      name="LAST_UPDATED" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[SOURCE_ID]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[SOURCE_ID]"
+                      name="SOURCE_ID" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_ID]"
+                      name="STATE_ID" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_NAME]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATE_NAME]"
+                      name="STATE_NAME" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[ST_LAST_UPDATED]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[ST_LAST_UPDATED]"
+                      name="ST_LAST_UPDATED" />
+                    <outputColumn
+                      refId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATUS]"
+                      dataType="i4"
+                      lineageId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1].Columns[STATUS]"
+                      name="STATUS" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[Changing Attribute Updates Output]"
+              endId="Package\DIM_GEO - TO DDS\OLE DB Command 2.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[Derived Column Output]"
+              endId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+              name="Derived Column Output"
+              startId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[Derived Column Output1]"
+              endId="Package\DIM_GEO - TO DDS\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\DIM_GEO - TO DDS\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[Derived Column Output2]"
+              endId="Package\DIM_GEO - TO DDS\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DIM_GEO - TO DDS\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[Historical Attribute Inserts Output]"
+              endId="Package\DIM_GEO - TO DDS\Derived Column.Inputs[Derived Column Input]"
+              name="Historical Attribute Inserts Output"
+              startId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[Inferred Member Updates Output]"
+              endId="Package\DIM_GEO - TO DDS\OLE DB Command 1.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[New Output]"
+              endId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 1]"
+              name="New Output"
+              startId="Package\DIM_GEO - TO DDS\Slowly Changing Dimension.Outputs[New Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[OLE DB Command Output]"
+              endId="Package\DIM_GEO - TO DDS\Union All.Inputs[Union All Input 2]"
+              name="OLE DB Command Output"
+              startId="Package\DIM_GEO - TO DDS\OLE DB Command.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[OLE DB Source Output]"
+              endId="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DIM_GEO - TO DDS.Paths[Union All Output 1]"
+              endId="Package\DIM_GEO - TO DDS\Derived Column 1.Inputs[Derived Column Input]"
+              name="Union All Output 1"
+              startId="Package\DIM_GEO - TO DDS\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GET LSET, CET"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FCED40BA-8D9B-4B24-9996-AF2E418777F8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GET LSET, CET"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{37FB2D24-0771-4411-BD52-72485A581117}"
+          SQLTask:SqlStatementSource="SELECT TOP 1 LSET, GETDATE() AS CET&#xA;FROM dbo.DDS"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSET" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CET" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\UPDATE LSET"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{163FA3C0-1EED-4915-827F-9F5086860B09}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="UPDATE LSET"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{37FB2D24-0771-4411-BD52-72485A581117}"
+          SQLTask:SqlStatementSource="UPDATE [dbo].DDS SET LSET=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::CET"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9207EE6A-9E38-4EB9-9641-FE8E84358022}"
+      DTS:From="Package\GET LSET, CET"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DIM_GEO - TO DDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{240F40A5-1B5F-4BBB-A0D6-B6E87D573953}"
+      DTS:From="Package\DIM_GEO - TO DDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\UPDATE LSET" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\DIM_GEO - TO DDS"
+          TopLeft="64.1666631607548,101.399999294877" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\GET LSET, CET"
+          TopLeft="72.4999960387748,35.533333086239" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="150.733329599765,77.133333086239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.2666662086382"
+              Start="0,0"
+              End="0,16.7666662086382">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7666662086382" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\UPDATE LSET"
+          TopLeft="79.9999956289929,175.066665449275" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="153.083329394874,142.999999294877">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.0666661543979"
+              Start="0,0"
+              End="0,24.5666661543979">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5666661543979" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DIM_GEO - TO DDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\DIM_GEO - TO DDS\Slowly Changing Dimension"
+          TopLeft="130.1,208.7" />
+        <NodeLayout
+          Size="311.2,41.6"
+          Id="Package\DIM_GEO - TO DDS\Add STATUS, and reassign LAST_UPDATED cols"
+          TopLeft="78.5,107.1" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE"
+          TopLeft="129.7,5.49999999999995" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[Derived Column Output]"
+          TopLeft="234.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[OLE DB Source Output]"
+          TopLeft="234.1,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DIM_GEO - TO DDS\Derived Column"
+          TopLeft="20.7,310.3" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[Historical Attribute Inserts Output]"
+          TopLeft="174.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-77,60"
+              Start="0,0"
+              End="-77,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8378378378378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8378378378378"
+                    Point2="0,17.8378378378378"
+                    Point3="-4,17.8378378378378" />
+                  <mssgle:LineSegment
+                    End="-73,17.8378378378378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-73,17.8378378378378"
+                    Point2="-77,17.8378378378378"
+                    Point3="-77,21.8378378378378" />
+                  <mssgle:LineSegment
+                    End="-77,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-113.55638671875,22.8378378378378,150.1127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\DIM_GEO - TO DDS\OLE DB Command"
+          TopLeft="5.50000000000003,411.9" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[Derived Column Output1]"
+          TopLeft="97.1,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8,59.9999999999999"
+              Start="0,0"
+              End="-8,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9999999999999"
+                    Point2="0,29.9999999999999"
+                    Point3="-4,29.9999999999999" />
+                  <mssgle:LineSegment
+                    End="-4,29.9999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4,29.9999999999999"
+                    Point2="-8,29.9999999999999"
+                    Point3="-8,33.9999999999999" />
+                  <mssgle:LineSegment
+                    End="-8,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\DIM_GEO - TO DDS\Union All"
+          TopLeft="174.1,513.5" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[New Output]"
+          TopLeft="214.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.6666666666667,263.2"
+              Start="0,0"
+              End="38.6666666666667,255.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,138.046830382638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,138.046830382638"
+                    Point2="0,142.046830382638"
+                    Point3="4,142.046830382638" />
+                  <mssgle:LineSegment
+                    End="34.6666666666667,142.046830382638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.6666666666667,142.046830382638"
+                    Point2="38.6666666666667,142.046830382638"
+                    Point3="38.6666666666667,146.046830382638" />
+                  <mssgle:LineSegment
+                    End="38.6666666666667,255.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-7.75805338541667,147.046830382638,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[OLE DB Command Output]"
+          TopLeft="89.1,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.333333333333,59.9999999999998"
+              Start="0,0"
+              End="126.333333333333,52.4999999999998">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5263157894736"
+                    Point2="0,35.5263157894736"
+                    Point3="4,35.5263157894736" />
+                  <mssgle:LineSegment
+                    End="122.333333333333,35.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.333333333333,35.5263157894736"
+                    Point2="126.333333333333,35.5263157894736"
+                    Point3="126.333333333333,39.5263157894736" />
+                  <mssgle:LineSegment
+                    End="126.333333333333,52.4999999999998" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\DIM_GEO - TO DDS\Derived Column 1"
+          TopLeft="153.3,615.099999999999" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[Union All Output 1]"
+          TopLeft="234.1,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\DIM_GEO - TO DDS\Insert Destination"
+          TopLeft="154.5,716.699999999999" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[Derived Column Output2]"
+          TopLeft="234.1,656.699999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\DIM_GEO - TO DDS\OLE DB Command 1"
+          TopLeft="295.1,310.3" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[Inferred Member Updates Output]"
+          TopLeft="254.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="129,59.9999999999999"
+              Start="0,0"
+              End="129,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8085106382978" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8085106382978"
+                    Point2="0,26.8085106382978"
+                    Point3="4,26.8085106382978" />
+                  <mssgle:LineSegment
+                    End="125,26.8085106382978" />
+                  <mssgle:CubicBezierSegment
+                    Point1="125,26.8085106382978"
+                    Point2="129,26.8085106382978"
+                    Point3="129,30.8085106382978" />
+                  <mssgle:LineSegment
+                    End="129,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-9.90298828125,31.8085106382978,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\DIM_GEO - TO DDS\OLE DB Command 2"
+          TopLeft="532.1,310.3" />
+        <EdgeLayout
+          Id="Package\DIM_GEO - TO DDS.Paths[Changing Attribute Updates Output]"
+          TopLeft="294.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="326,59.9999999999999"
+              Start="0,0"
+              End="326,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8378378378378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8378378378378"
+                    Point2="0,17.8378378378378"
+                    Point3="4,17.8378378378378" />
+                  <mssgle:LineSegment
+                    End="322,17.8378378378378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="322,17.8378378378378"
+                    Point2="326,17.8378378378378"
+                    Point3="326,21.8378378378378" />
+                  <mssgle:LineSegment
+                    End="326,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="84.46609375,22.8378378378378,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM_GEO - TO DDS\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionID&gt;{F64C5DEC-D87B-446E-9A37-6B15DCC0A786}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DIM_GEO]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;COUNTY&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[COUNTY_FIPS]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;COUNTY_FIPS&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[CREATED]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;CREATED&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAST_UPDATED]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;LAST_UPDATED&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LAT]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;LAT&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[LNG]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;LNG&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[POPULATION]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;POPULATION&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[SOURCE_ID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;SOURCE_ID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_ID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;STATE_ID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;NDS - COUNTY join STATE.Outputs[OLE DB Source Output].Columns[STATE_NAME]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;STATE_NAME&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Add STATUS, and reassign LAST_UPDATED cols.Outputs[Derived Column Output].Columns[STATUS]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;STATUS&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Derived Column&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Union All&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Derived Column 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 2&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn&gt;STATUS&lt;/CurrentIndicatorColumn&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent&gt;1&lt;/ValueCurrent&gt;
+  &lt;ValueExpired&gt;0&lt;/ValueExpired&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM_GEO - TO DDS\NDS - COUNTY join STATE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
