@@ -12,8 +12,8 @@
   DTS:ObjectName="NDS_DDS"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{FD0B0EE9-EAB9-4EDF-8C5C-D810B2E69472}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{0F42A209-91EF-4D33-B3FE-6B9AFCF781F0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2284,6 +2284,86 @@ WHERE (CT.CREATED &gt; ? AND CT.CREATED &lt;= ?)
           version="1">
           <components>
             <component
+              refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add AQI_SQUARED col"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Inputs[Derived Column Input].Columns[AQI]"
+                      cachedDataType="i4"
+                      cachedName="AQI"
+                      lineageId="Package\FACT_AIR_QUALITY - TO DDS\NDS - AIR_QUALITY join COUNTY join STATE.Outputs[OLE DB Source Output].Columns[AQI]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Output].Columns[AQI_SQUARED]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Output].Columns[AQI_SQUARED]"
+                      name="AQI_SQUARED"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SQUARE](#{Package\FACT_AIR_QUALITY - TO DDS\NDS - AIR_QUALITY join COUNTY join STATE.Outputs[OLE DB Source Output].Columns[AQI]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SQUARE(AQI)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -2418,6 +2498,12 @@ WHERE (CT.CREATED &gt; ? AND CT.CREATED &lt;= ?)
                       cachedName="DATE_ID"
                       externalMetadataColumnId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[DATE_ID]"
                       lineageId="Package\FACT_AIR_QUALITY - TO DDS\Lookup DATE_ID from DATE.Outputs[Lookup Match Output].Columns[DATE_ID]" />
+                    <inputColumn
+                      refId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY.Inputs[OLE DB Destination Input].Columns[AQI_SQUARED]"
+                      cachedDataType="r8"
+                      cachedName="AQI_SQUARED"
+                      externalMetadataColumnId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[AQI_SQUARED]"
+                      lineageId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Output].Columns[AQI_SQUARED]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2468,6 +2554,10 @@ WHERE (CT.CREATED &gt; ? AND CT.CREATED &lt;= ?)
                       refId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[SOURCE_ID]"
                       dataType="i4"
                       name="SOURCE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY.Inputs[OLE DB Destination Input].ExternalColumns[AQI_SQUARED]"
+                      dataType="i4"
+                      name="AQI_SQUARED" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3145,13 +3235,18 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
           </components>
           <paths>
             <path
+              refId="Package\FACT_AIR_QUALITY - TO DDS.Paths[Derived Column Output]"
+              endId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Outputs[Derived Column Output]" />
+            <path
               refId="Package\FACT_AIR_QUALITY - TO DDS.Paths[Lookup Match Output]"
               endId="Package\FACT_AIR_QUALITY - TO DDS\Lookup DATE_ID from DATE.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\FACT_AIR_QUALITY - TO DDS\Lookup GEO_ID from (STATE_ID, COUNTY_FIPS).Outputs[Lookup Match Output]" />
             <path
               refId="Package\FACT_AIR_QUALITY - TO DDS.Paths[Lookup Match Output1]"
-              endId="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY.Inputs[OLE DB Destination Input]"
+              endId="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\FACT_AIR_QUALITY - TO DDS\Lookup DATE_ID from DATE.Outputs[Lookup Match Output]" />
             <path
@@ -3256,6 +3351,10 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
           Id="Package\DIM_GEO - TO DDS"
           TopLeft="64.1666631607548,101.399999294877" />
         <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\FACT_AIR_QUALITY - TO DDS"
+          TopLeft="268.333318672247,103.133332616157" />
+        <NodeLayout
           Size="155.2,41.6"
           Id="Package\GET LSET, CET"
           TopLeft="72.4999960387748,35.533333086239" />
@@ -3285,10 +3384,6 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="227.2,41.6"
-          Id="Package\FACT_AIR_QUALITY - TO DDS"
-          TopLeft="268.333318672247,103.133332616157" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="238.566663160755,123.066665955517">
@@ -3798,15 +3893,23 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
     design-time-name="Package\FACT_AIR_QUALITY - TO DDS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="298.4,41.6"
           Id="Package\FACT_AIR_QUALITY - TO DDS\NDS - AIR_QUALITY join COUNTY join STATE"
           TopLeft="53.3333304193285,31.1999997830391" />
         <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\FACT_AIR_QUALITY - TO DDS\Lookup DATE_ID from DATE"
+          TopLeft="439.999975959461,107.466665919357" />
+        <NodeLayout
           Size="316,41.6"
           Id="Package\FACT_AIR_QUALITY - TO DDS\Lookup GEO_ID from (STATE_ID, COUNTY_FIPS)"
           TopLeft="396.666644993757,32.0666664436791" />
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY"
+          TopLeft="139.999992350737,188.066665358875" />
         <EdgeLayout
           Id="Package\FACT_AIR_QUALITY - TO DDS.Paths[OLE DB Source Output]"
           TopLeft="351.733330419329,52.4333331133591">
@@ -3829,10 +3932,6 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="213.6,41.6"
-          Id="Package\FACT_AIR_QUALITY - TO DDS\Lookup DATE_ID from DATE"
-          TopLeft="439.999975959461,107.466665919357" />
         <EdgeLayout
           Id="Package\FACT_AIR_QUALITY - TO DDS.Paths[Lookup Match Output]"
           TopLeft="550.733310476609,73.6666664436791">
@@ -3858,31 +3957,53 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="209.6,41.6"
-          Id="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY"
-          TopLeft="444.166642398471,184.599998716315" />
+          Size="191.2,41.6"
+          Id="Package\FACT_AIR_QUALITY - TO DDS\Add AQI_SQUARED col"
+          TopLeft="455.833308427699,187.199998698235" />
         <EdgeLayout
           Id="Package\FACT_AIR_QUALITY - TO DDS.Paths[Lookup Match Output1]"
-          TopLeft="547.883309178966,149.066665919357">
+          TopLeft="549.11664219358,149.066665919357">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.5333327969578"
+              EndConnector="0,38.1333327788775"
               Start="0,0"
-              End="0,28.0333327969578">
+              End="0,30.6333327788775">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.0333327969578" />
+                    End="0,30.6333327788775" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.21197889847889,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,9.51197888943875,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_AIR_QUALITY - TO DDS.Paths[Derived Column Output]"
+          TopLeft="455.833308427699,208.433332028555">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-106.233316076962,0"
+              Start="0,0"
+              End="-98.7333160769621,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-98.7333160769621,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3897,35 +4018,12 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FACT_AIR_QUALITY - TO DDS\Lookup GEO_ID from (STATE_ID, COUNTY_FIPS)">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_GEO]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\FACT_AIR_QUALITY - TO DDS\Lookup DATE_ID from DATE">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3935,7 +4033,30 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_AIR_QUALITY - TO DDS\Lookup GEO_ID from (STATE_ID, COUNTY_FIPS)">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_GEO]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -1,0 +1,83 @@
+/* 1. Report the min and max of AQI value for each State during each quarter
+ *  of years. Analysis hints: How do the AQI values fluctuate during the
+ *  year? Pay attention to the values (max, min). Are any unusually
+ *  large or small?
+ */
+SELECT
+    NON EMPTY
+        [DIM GEO].[STATE NAME].[STATE NAME] *
+		{[Measures].[Minimum AQI], [Measures].[Maximum AQI]} ON ROWS,
+    NON EMPTY
+        [DIM DATE].[YEAR].[YEAR] *
+        [DIM DATE].[QUARTER].[QUARTER] ON COLUMNS
+FROM [21BI11 DDS];
+
+/* 2. Report the mean and the standard deviation of AQI value for each State
+ *  during each quarter of years. Analysis hints: How do the AQI values
+ *  fluctuate during the year? Pay attention to the values (mean, std, max,
+ *  min). Are any unusually large or small?
+ */
+SELECT
+    NON EMPTY
+        [DIM GEO].[STATE NAME].[STATE NAME] *
+        {[Measures].[AVG AQI], [Measures].[STDEV AQI]} ON ROWS,
+    NON EMPTY
+        [DIM DATE].[YEAR].[YEAR] *
+        [DIM DATE].[QUARTER].[QUARTER] ON COLUMNS
+FROM [21BI11 DDS];
+
+/* 3. Report the number of days, and the mean AQI value where the air
+ *  quality is rated as "very unhealthy" or worse for each State and County.
+ *  Analysis hint: What is the AQI limit above which air quality is "very
+ *  unhealthy" or worse?
+ */
+SELECT
+    NON EMPTY
+        [DIM GEO].[STATE NAME].[STATE NAME] *
+        [DIM GEO].[COUNTY].[COUNTY] ON ROWS,
+    NON EMPTY
+        {[Measures].[FACT AIR QUALITY Count],
+		 [Measures].[AVG AQI]} ON COLUMNS
+FROM [21BI11 DDS]
+WHERE
+    {[DIM CATEGORY].[CATEGORY].&[Very Unhealthy],
+     [DIM CATEGORY].[CATEGORY].&[Hazardous]};
+
+/* 4. For the four following states: Hawaii, Alaska, Illinois and Delaware,
+ *  count the number of days in each air quality Category (Good, Moderate,
+ *  etc.) by County. Analysis hints: Comparing the data of the states and
+ *  counties, focus on the distribution of the harmful air condition.
+ *  What could you conclude about the differences?
+ */
+SELECT
+    NON EMPTY
+        {[DIM GEO].[STATE NAME].&[Hawaii],
+         [DIM GEO].[STATE NAME].&[Alaska],
+         [DIM GEO].[STATE NAME].&[Illinois],
+         [DIM GEO].[STATE NAME].&[Delaware]} *
+        [DIM GEO].[COUNTY].[COUNTY] ON ROWS,
+    NON EMPTY
+        [DIM CATEGORY].[CATEGORY].[CATEGORY] ON COLUMNS
+FROM [21BI11 DDS]
+WHERE [Measures].[FACT AIR QUALITY Count];
+
+/*	---- BONUS QUESTIONS ----
+ */
+
+/* 10. Create a new attribute, DayLightSaving, in a suitable table.
+ *  DayLightSaving may have two values:
+ *    True: Between March 12, 2023, and November 5, 2023.
+ *    False: Otherwise.
+ *  Report the mean AQI value by State, Category, DayLightSaving over years.
+ *  Analysis hint: Is there any notable difference on the air quality during
+ *  the Daylight Saving period compared to the other?
+ */
+SELECT
+    NON EMPTY
+		[DIM GEO].[STATE NAME].[STATE NAME] *
+		[DIM DATE].[YEAR].[YEAR] *
+		[DIM DATE].[DAYLIGHT SAVING].[DAYLIGHT SAVING] ON ROWS,
+    NON EMPTY
+        [DIM CATEGORY].[CATEGORY].[CATEGORY] ON COLUMNS
+FROM [21BI11 DDS]
+WHERE [Measures].[AVG AQI];

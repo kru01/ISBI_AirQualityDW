@@ -1,0 +1,378 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="be378a0a-185f-45cc-ac9e-7a7877c0aa42" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>21BI11 DDS</ID>
+  <Name>21BI11 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9145" scrolltop="-876" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="24130" y="12340" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01a300009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_AIR_QUALITY" left="20" top="87" logicalid="6" controlid="1" masterid="0" hint1="0" hint2="0" width="5800" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000a8160000da120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FACT_AIR_QUALITY" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_GEO" left="8220" top="0" logicalid="7" controlid="2" masterid="0" hint1="0" hint2="0" width="3387" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003b0d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_GEO" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DATE" left="1420" top="7313" logicalid="8" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_DATE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1421" top="4613" logicalid="9" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_AIR_QUALITY_DIM_DATE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="0" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1820" y="7313" />
+              <point x="1820" y="4913" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5520" top="-99" logicalid="10" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_AIR_QUALITY_DIM_GEO]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="10" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8220" y="300" />
+              <point x="5820" y="300" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-9145</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-876</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="5a80369d-e429-4ea4-8479-10c9f5ddfab3">
+      <ID>DIM DATE</ID>
+      <Name>DIM DATE</Name>
+      <DimensionID>DIM DATE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6006e200-3c90-4d0b-9beb-c9405fa6cca8">
+          <AttributeID>DATE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fad4cc09-af7f-44f7-bafb-cc557c79189f">
+          <AttributeID>YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="367e121d-2faa-484e-82b6-9d47987e8423">
+          <AttributeID>QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="039129d7-6df0-4e6f-b75a-935a362a7ad9">
+          <AttributeID>MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f6dd651d-e7a7-4270-b913-2d6620e7b3a9">
+          <AttributeID>DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e88a64ba-ee08-4080-89f5-9c837f42cebe">
+          <AttributeID>DATE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47281918-97fe-4d00-8413-b34f96942dd7">
+          <AttributeID>DAYLIGHT SAVING</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="db51c228-cb44-4e87-ab2c-c70e4e997faf">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="bef067cc-98d1-43c0-962e-1c94bc0492da">
+      <ID>DIM GEO</ID>
+      <Name>DIM GEO</Name>
+      <DimensionID>DIM GEO</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c1802306-2599-4f4e-83b7-a501e99a8b1d">
+          <AttributeID>GEO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5fe10c36-d7d2-4d0b-93dc-ce6b1d3d1234">
+          <AttributeID>STATE NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="60061415-ac9c-4df6-bdfb-cd7ac96ff808">
+          <AttributeID>COUNTY</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="8034592a-8d88-4c74-a6df-1ce3c95eb025">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="9cdf0556-3618-4f29-8d37-cf135d3d836d">
+      <ID>DIM CATEGORY</ID>
+      <Name>DIM CATEGORY</Name>
+      <DimensionID>DIM CATEGORY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="02dc6832-b54d-4862-b267-ca4ee57e5233">
+          <AttributeID>CATEGORY</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="3cd98375-4377-4aed-bf53-4b8106f467ca">
+      <ID>FACT AIR QUALITY</ID>
+      <Name>FACT AIR QUALITY</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="fd7c3ea9-ab5c-46fa-8869-b2359942ef8d">
+          <ID>AQI</ID>
+          <Name>AQI</Name>
+          <Source dwd:design-time-name="24757abe-43ff-4a17-84d2-270f84aedaf6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="44f789c8-fbbb-4278-b3b6-8e2b891db5e4">
+              <TableID>dbo_FACT_AIR_QUALITY</TableID>
+              <ColumnID>AQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="41cb8c4f-f2c0-4991-b0c3-f5d47c532d6c">
+          <ID>FACT AIR QUALITY Count</ID>
+          <Name>FACT AIR QUALITY Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="aa28ad6a-225b-4506-9531-f9a19faab7f1">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="9dd5c682-81cd-4a00-86fe-bbf944024e7a">
+              <TableID>dbo_FACT_AIR_QUALITY</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c922ed8d-db55-4911-ae3a-5724fbac3a49">
+          <ID>AQI - FACT AIR QUALITY 1</ID>
+          <Name>SUM AQI</Name>
+          <Source dwd:design-time-name="d2d8b59a-d972-41c4-8993-2c891a888ee0">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c0558b80-98a0-4241-b983-cfbb05fa2e8b">
+              <TableID>dbo_FACT_AIR_QUALITY</TableID>
+              <ColumnID>AQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6d6f40dd-5706-4bf0-b6ec-e5c3cec08f99">
+          <ID>Minimum AQI</ID>
+          <Name>Minimum AQI</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <Source dwd:design-time-name="50d41bc0-4d4d-4b77-a8a0-b0e1a654f6d2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b09705ff-d08c-4d6e-b22a-31bd17de9638">
+              <TableID>dbo_FACT_AIR_QUALITY</TableID>
+              <ColumnID>AQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="26488da5-c017-42b0-aa39-9ca571b0bb0a">
+          <ID>Maximum AQI</ID>
+          <Name>Maximum AQI</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="525ec2d4-5f71-4ccc-976b-bd10ada6daee">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="32258376-3df7-4bbc-9564-385304d2360b">
+              <TableID>dbo_FACT_AIR_QUALITY</TableID>
+              <ColumnID>AQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cd4bfed2-170b-473c-a84e-cf4e80d5f48b">
+          <ID>AQI SQUARED</ID>
+          <Name>SUM AQI SQUARED</Name>
+          <Source dwd:design-time-name="d3367a51-f348-4792-9b86-f582e6ce5311">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c7f210b4-140c-4e6e-953a-62605ce171ea">
+              <TableID>dbo_FACT_AIR_QUALITY</TableID>
+              <ColumnID>AQI_SQUARED</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0568eda8-a14e-4a8a-8664-c09abc19aaff">
+          <CubeDimensionID>DIM DATE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bc5f2e99-cccf-4147-a3b9-18dbe234923d">
+              <AttributeID>DATE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ef523ccb-20ac-49bb-baea-6eb0b7882059">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bae7fcc4-a0fa-4750-a1a5-41018248f030">
+                    <TableID>dbo_FACT_AIR_QUALITY</TableID>
+                    <ColumnID>DATE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="90681f30-b384-49ff-b72a-8393d22bcbe6">
+          <CubeDimensionID>DIM GEO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="02e7bb4b-2936-418a-a4ee-a556d4e8a3ee">
+              <AttributeID>GEO ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="46cdbec3-fda0-4763-80dc-cc5c8a7b1dfe">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a624c3d7-6446-4c82-928b-2905007ae881">
+                    <TableID>dbo_FACT_AIR_QUALITY</TableID>
+                    <ColumnID>GEO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c34cb88d-08e1-4106-9c74-bd800cfed077">
+          <CubeDimensionID>DIM CATEGORY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b4dd3262-3aeb-47ea-ad8b-d01a1577f697">
+              <AttributeID>CATEGORY</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0c59e10d-42ad-4567-bab7-d13244a4be85">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="45df3294-156d-418b-a41a-6fc8f90f3f0c">
+                    <TableID>dbo_FACT_AIR_QUALITY</TableID>
+                    <ColumnID>CATEGORY</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="e6e0ab9a-637f-4702-b8c9-f0ba3a58b18f">
+    <DataSourceViewID>21BI11 DDS</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="54667d8f-6426-48a2-a7c5-70ce67d1888f">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;          
+CREATE MEMBER CURRENTCUBE.[Measures].[STDEV AQI]
+ AS IIF(
+    [Measures].[FACT AIR QUALITY Count] = 0,
+    NULL,
+    (
+        ([Measures].[SUM AQI SQUARED] - 
+            ([Measures].[SUM AQI] * [Measures].[SUM AQI]) / 
+            [Measures].[FACT AIR QUALITY Count]) / 
+        [Measures].[FACT AIR QUALITY Count]
+    ) ^ 0.5
+), 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'FACT AIR QUALITY'  ;           
+CREATE MEMBER CURRENTCUBE.[Measures].[AVG AQI]
+ AS IIF(
+    [Measures].[FACT AIR QUALITY Count] = 0,
+    NULL,
+    [Measures].[SUM AQI] / [Measures].[FACT AIR QUALITY Count]
+), 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'FACT AIR QUALITY'; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

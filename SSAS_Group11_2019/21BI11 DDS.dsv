@@ -1,0 +1,251 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="304ab19d-a50b-4f5d-91af-db279c6d0334" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>21BI11 DDS</ID>
+  <Name>21BI11 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6519" scrolltop="-480" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="24723" y="13631" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01a300009001b0300100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DATE" left="8200" top="899" logicalid="6" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DIM_DATE" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_GEO" left="1206" top="7226" logicalid="7" controlid="2" masterid="0" hint1="0" hint2="0" width="3387" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00003b0d000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DIM_GEO" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_AIR_QUALITY" left="0" top="0" logicalid="8" controlid="3" masterid="0" hint1="0" hint2="0" width="5800" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000a8160000da120000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_FACT_AIR_QUALITY" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="5500" top="913" logicalid="12" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_FACT_AIR_QUALITY_DIM_DATE]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="10" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="8200" y="1312" />
+                    <point x="7000" y="1312" />
+                    <point x="7000" y="1313" />
+                    <point x="5800" y="1313" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="1400" top="4526" logicalid="13" controlid="8" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_FACT_AIR_QUALITY_DIM_GEO]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="0" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="1799" y="7226" />
+                    <point x="1799" y="6026" />
+                    <point x="1800" y="6026" />
+                    <point x="1800" y="4826" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-6519</DiagramViewPortLeft>
+            <DiagramViewPortTop>-480</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>21BI11 DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="_x0032_1BI11_x0020_DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="_x0032_1BI11_x0020_DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="6a1c4858-18fe-4dea-a52b-febea40c8880">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DIM_DATE" msprop:design-time-name="acb7ef4a-a2c4-44fc-a55b-658b80db44b3" msprop:FriendlyName="DIM_DATE" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_DATE" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DATE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="30bc5203-659f-4536-b1b5-26df163e98a9" msprop:DbColumnName="DATE_ID" msprop:FriendlyName="DATE_ID" type="xs:int" />
+                  <xs:element name="DATE" msprop:design-time-name="48b3b844-8d28-4c54-a93f-61c4d6a06af3" msprop:DbColumnName="DATE" msprop:FriendlyName="DATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="YEAR" msprop:design-time-name="c45d9e33-5e64-4c76-998b-67b0abf69cc0" msprop:DbColumnName="YEAR" msprop:FriendlyName="YEAR" type="xs:int" minOccurs="0" />
+                  <xs:element name="QUARTER" msprop:design-time-name="052969c5-deaa-4317-830f-16f55d8b7e16" msprop:DbColumnName="QUARTER" msprop:FriendlyName="QUARTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH" msprop:design-time-name="1fafeb7a-4dfe-43d2-9820-e20bbc268eef" msprop:DbColumnName="MONTH" msprop:FriendlyName="MONTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAY" msprop:design-time-name="64fb9b80-302d-47ea-908e-ec1d05a27f2f" msprop:DbColumnName="DAY" msprop:FriendlyName="DAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAYLIGHT_SAVING" msprop:design-time-name="cbd0cc83-3e8b-45bb-b440-d8c3948e12eb" msprop:DbColumnName="DAYLIGHT_SAVING" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_GEO" msprop:design-time-name="3ed1a94e-a17a-4b2e-bf19-3db559298d83" msprop:FriendlyName="DIM_GEO" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_GEO" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GEO_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="afd42ccf-04fc-4276-820a-3a0da51a8add" msprop:DbColumnName="GEO_ID" msprop:FriendlyName="GEO_ID" type="xs:int" />
+                  <xs:element name="STATE_ID" msprop:design-time-name="b8d55380-9c04-4585-8d7b-97eb6f1d2d68" msprop:DbColumnName="STATE_ID" msprop:FriendlyName="STATE_ID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COUNTY_FIPS" msprop:design-time-name="13447a16-6018-4f90-ae69-09b6502edea8" msprop:DbColumnName="COUNTY_FIPS" msprop:FriendlyName="COUNTY_FIPS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STATE_NAME" msprop:design-time-name="c3814a3c-28f0-43ab-83ca-b75d606c7a69" msprop:DbColumnName="STATE_NAME" msprop:FriendlyName="STATE_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COUNTY" msprop:design-time-name="485c3385-397b-46e7-8592-a6cbb0a4f835" msprop:DbColumnName="COUNTY" msprop:FriendlyName="COUNTY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LAT" msprop:design-time-name="7739befb-222f-4c6b-b781-2b4bcf991655" msprop:DbColumnName="LAT" msprop:FriendlyName="LAT" type="xs:double" minOccurs="0" />
+                  <xs:element name="LNG" msprop:design-time-name="d4135aaa-1590-4d61-b575-b2def3886dc0" msprop:DbColumnName="LNG" msprop:FriendlyName="LNG" type="xs:double" minOccurs="0" />
+                  <xs:element name="POPULATION" msprop:design-time-name="1f367491-1efb-4be0-83af-e3893d37926e" msprop:DbColumnName="POPULATION" msprop:FriendlyName="POPULATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="CREATED" msprop:design-time-name="91cc9a70-785f-4140-99cd-bde7ae18f2f9" msprop:DbColumnName="CREATED" msprop:FriendlyName="CREATED" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="LAST_UPDATED" msprop:design-time-name="0722ef49-fb2e-4499-9216-5e3f95f8ecac" msprop:DbColumnName="LAST_UPDATED" msprop:FriendlyName="LAST_UPDATED" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="STATUS" msprop:design-time-name="cbf16a56-b1bd-43b8-a80f-df9460d456e6" msprop:DbColumnName="STATUS" msprop:FriendlyName="STATUS" type="xs:int" minOccurs="0" />
+                  <xs:element name="SOURCE_ID" msprop:design-time-name="c0f6071e-df4a-49e9-aebe-3656b5d288f4" msprop:DbColumnName="SOURCE_ID" msprop:FriendlyName="SOURCE_ID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FACT_AIR_QUALITY" msprop:design-time-name="2d57326a-68a7-4152-9de8-c114252de013" msprop:FriendlyName="FACT_AIR_QUALITY" msprop:DbSchemaName="dbo" msprop:DbTableName="FACT_AIR_QUALITY" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AQI_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="839efd40-2863-40b1-be58-60780920d720" msprop:DbColumnName="AQI_ID" msprop:FriendlyName="AQI_ID" type="xs:int" />
+                  <xs:element name="GEO_ID" msprop:design-time-name="7e6c6c43-a9d6-4901-9a46-9232d739077b" msprop:DbColumnName="GEO_ID" msprop:FriendlyName="GEO_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATE_ID" msprop:design-time-name="2c942e21-fce1-453f-b444-4a20c113d2eb" msprop:DbColumnName="DATE_ID" msprop:FriendlyName="DATE_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="AQI" msprop:design-time-name="af225e62-d4df-4b2e-b5cb-c7d6233de769" msprop:DbColumnName="AQI" msprop:FriendlyName="AQI" type="xs:int" minOccurs="0" />
+                  <xs:element name="CATEGORY" msprop:design-time-name="ee57e1db-d1ba-4869-94ab-2698815fc2e0" msprop:DbColumnName="CATEGORY" msprop:FriendlyName="CATEGORY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEFINING_PARAMETER" msprop:design-time-name="8b6abe77-ecea-4b65-8a64-8a6bbffdd57f" msprop:DbColumnName="DEFINING_PARAMETER" msprop:FriendlyName="DEFINING_PARAMETER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEFINING_SITE" msprop:design-time-name="f3e2e640-18f8-4dcc-8cf7-b7849a0aeb46" msprop:DbColumnName="DEFINING_SITE" msprop:FriendlyName="DEFINING_SITE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMBER_OF_SITES_REPORTING" msprop:design-time-name="c530627f-d75c-4e24-94e9-9a0fb44cbbdf" msprop:DbColumnName="NUMBER_OF_SITES_REPORTING" msprop:FriendlyName="NUMBER_OF_SITES_REPORTING" type="xs:int" minOccurs="0" />
+                  <xs:element name="CREATED" msprop:design-time-name="a0103282-1a5e-43fd-b85e-4d76a31cdfd8" msprop:DbColumnName="CREATED" msprop:FriendlyName="CREATED" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="LAST_UPDATED" msprop:design-time-name="7c3e6e02-429a-4eb5-afce-7a488947d254" msprop:DbColumnName="LAST_UPDATED" msprop:FriendlyName="LAST_UPDATED" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="SOURCE_ID" msprop:design-time-name="65f8bb39-c755-4d27-af0f-957cb6b527d1" msprop:DbColumnName="SOURCE_ID" msprop:FriendlyName="SOURCE_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="AQI_SQUARED" msprop:DbColumnName="AQI_SQUARED" msprop:design-time-name="60c33958-af6c-4446-a558-bc906254d1bf" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_DATE" />
+          <xs:field xpath="DATE_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_GEO_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_GEO" />
+          <xs:field xpath="GEO_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_FACT_AIR_QUALITY_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FACT_AIR_QUALITY" />
+          <xs:field xpath="AQI_ID" />
+        </xs:unique>
+        <xs:keyref name="FK_FACT_AIR_QUALITY_DIM_GEO" refer="dbo_DIM_GEO_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_AIR_QUALITY" />
+          <xs:field xpath="GEO_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_AIR_QUALITY_DIM_DATE" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FACT_AIR_QUALITY" />
+          <xs:field xpath="DATE_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <_x0032_1BI11_x0020_DDS xmlns="" />
+  </Schema>
+</DataSourceView>

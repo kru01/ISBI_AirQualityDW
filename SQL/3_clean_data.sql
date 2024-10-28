@@ -49,6 +49,25 @@ SELECT DISTINCT STATE_ID, COUNTY_FIPS FROM [21BI11_STAGE].dbo.[2B_USCOUNTIES]
 SELECT DISTINCT CATEGORY FROM [21BI11_STAGE].[dbo].[10_STATE_AQI]
 SELECT DISTINCT DEFINING_PARAMETER FROM [21BI11_STAGE].[dbo].[10_STATE_AQI]
 
+-- There are a lot of misclassifications between the AQI and CATEGORY in
+--  Air Quality data. E.g., AQI < 201 but labeled as 'Very Unhealthy',
+--  or AQI < 301 but as 'Hazardous'.
+SELECT * FROM [21BI11_STAGE].[dbo].[10_STATE_AQI]
+WHERE AQI < 201 AND CATEGORY='VERY UNHEALTHY'
+UNION ALL
+SELECT * FROM [21BI11_STAGE].[dbo].[10_STATE_AQI]
+WHERE AQI < 301 AND CATEGORY='HAZARDOUS'
+
+-- For safe measure, we'll be recategorizing all entries.
+UPDATE [21BI11_STAGE].[dbo].[10_STATE_AQI]
+SET CATEGORY = CASE
+    WHEN AQI <= 50 THEN 'Good'
+    WHEN AQI <= 100 THEN 'Moderate'
+    WHEN AQI <= 150 THEN 'Unhealthy for Sensitive Groups'
+    WHEN AQI <= 200 THEN 'Unhealthy'
+    WHEN AQI <= 300 THEN 'Very Unhealthy'
+    ELSE 'Hazardous' END
+
 -- Certain (State, County) pairs from Air Quality data doesn't align with
 --  (or exist in) US Counties list.
 SELECT DISTINCT AQ.STATE_NAME, AQ.COUNTY_NAME, AQ.STATE_CODE, AQ.COUNTY_CODE
