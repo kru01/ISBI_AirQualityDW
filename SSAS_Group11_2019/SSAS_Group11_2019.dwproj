@@ -31,6 +31,10 @@
       <Name>DIM CATEGORY.dim</Name>
       <FullPath>DIM CATEGORY.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>DIM DEFINING PARAMETER.dim</Name>
+      <FullPath>DIM DEFINING PARAMETER.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
