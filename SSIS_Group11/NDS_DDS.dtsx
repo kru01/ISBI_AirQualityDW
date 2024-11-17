@@ -12,8 +12,8 @@
   DTS:ObjectName="NDS_DDS"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{0F42A209-91EF-4D33-B3FE-6B9AFCF781F0}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{96C3FEAF-7D71-4884-BA72-1FEAFC7C3124}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -38,7 +38,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-NDS_DDS-{37FB2D24-0771-4411-BD52-72485A581117}LocalHost.21BI11_METADATA;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_METADATA;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-NDS_DDS-{37FB2D24-0771-4411-BD52-72485A581117}LocalHost.21BI11_METADATA;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -3347,19 +3347,19 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.4,41.6"
+          Size="174,42"
           Id="Package\DIM_GEO - TO DDS"
           TopLeft="64.1666631607548,101.399999294877" />
         <NodeLayout
-          Size="227.2,41.6"
+          Size="227,42"
           Id="Package\FACT_AIR_QUALITY - TO DDS"
           TopLeft="268.333318672247,103.133332616157" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\GET LSET, CET"
           TopLeft="72.4999960387748,35.533333086239" />
         <NodeLayout
-          Size="149.6,41.6"
+          Size="150,42"
           Id="Package\UPDATE LSET"
           TopLeft="302.499983472129,175.933332109915" />
         <EdgeLayout
@@ -4010,6 +4010,19 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\FACT_AIR_QUALITY - TO DDS\NDS - AIR_QUALITY join COUNTY join STATE">
     <Properties>
       <Property>
@@ -4060,19 +4073,6 @@ WHERE (AQ.CREATED &gt; ? AND AQ.CREATED &lt;= ?)
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FACT_AIR_QUALITY - TO DDS\DDS - FACT_AIR_QUALITY">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

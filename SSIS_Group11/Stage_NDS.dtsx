@@ -12,8 +12,8 @@
   DTS:ObjectName="Stage_NDS"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="114"
-  DTS:VersionGUID="{E46B4CEB-D6A5-4D58-8C01-73EFEBD3F478}">
+  DTS:VersionBuild="118"
+  DTS:VersionGUID="{85EA30EF-EEDD-4F59-885B-0DC724B729E8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,7 +26,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{02D54EDC-06FA-467E-835F-EF84EEE2AC17}LocalHost.21BI11_METADATA;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_METADATA;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{02D54EDC-06FA-467E-835F-EF84EEE2AC17}LocalHost.21BI11_METADATA;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -50,7 +50,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{9BF00C62-02A4-4DDA-8EBA-0D6DD65B07B6}LocalHost.21BI11_STAGE;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=21BI11_STAGE;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{9BF00C62-02A4-4DDA-8EBA-0D6DD65B07B6}LocalHost.21BI11_STAGE;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -158,6 +158,207 @@
                       refId="Package\AIR_QUALITY - TO NDS\Add CREATED and LAST_UPDATED cols.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\AIR_QUALITY - TO NDS\Add CREATED and LAST_UPDATED cols.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Convert DATE to DB_DATE, and TRIM trailling spaces"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input].Columns[STATE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="STATE_NAME"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[STATE_NAME]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[STATE_NAME]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(STATE_NAME)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input].Columns[COUNTY_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="COUNTY_NAME"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[COUNTY_NAME]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[COUNTY_NAME]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(COUNTY_NAME)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input].Columns[CATEGORY]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CATEGORY"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[CATEGORY]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[CATEGORY]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(CATEGORY)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input].Columns[DEFINING_PARAMETER]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DEFINING_PARAMETER"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_PARAMETER]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_PARAMETER]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(DEFINING_PARAMETER)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input].Columns[DEFINING_SITE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DEFINING_SITE"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_SITE]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_SITE]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(DEFINING_SITE)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input].Columns[DATE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DATE"
+                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Output].Columns[DATE_DB]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Output].Columns[DATE_DB]"
+                      name="DATE_DB"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)DATE</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -934,7 +1135,7 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                       refId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Inputs[Sort Input].Columns[DATE_DB]"
                       cachedDataType="dbDate"
                       cachedName="DATE_DB"
-                      lineageId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]">
+                      lineageId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Output].Columns[DATE_DB]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1099,7 +1300,7 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]}</property>
+                          name="SortColumnId">#{Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Output].Columns[DATE_DB]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1392,207 +1593,6 @@ where [refTable].[STATE_NAME] = ? and [refTable].[COUNTY] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="TRIM trailing spaces"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input].Columns[STATE_NAME]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="STATE_NAME"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[STATE_NAME]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[STATE_NAME]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(STATE_NAME)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input].Columns[COUNTY_NAME]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
-                      cachedName="COUNTY_NAME"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[COUNTY_NAME]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[COUNTY_NAME]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(COUNTY_NAME)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input].Columns[CATEGORY]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="CATEGORY"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[CATEGORY]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[CATEGORY]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(CATEGORY)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input].Columns[DEFINING_PARAMETER]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DEFINING_PARAMETER"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_PARAMETER]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_PARAMETER]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(DEFINING_PARAMETER)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input].Columns[DEFINING_SITE]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DEFINING_SITE"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_SITE]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DEFINING_SITE]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(DEFINING_SITE)</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input].Columns[DATE]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DATE"
-                      lineageId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output].Columns[DATE_DB]"
-                      name="DATE_DB"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_DBDATE)#{Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output].Columns[DATE]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBDATE)DATE</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\AIR_QUALITY - TO NDS\UPDATE matching entry"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
@@ -1794,7 +1794,7 @@ WHERE AQI_ID=?</property>
               refId="Package\AIR_QUALITY - TO NDS.Paths[Derived Column Output1]"
               endId="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Outputs[Derived Column Output]" />
+              startId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Outputs[Derived Column Output]" />
             <path
               refId="Package\AIR_QUALITY - TO NDS.Paths[Lookup Match Output]"
               endId="Package\AIR_QUALITY - TO NDS\UPDATE matching entry.Inputs[OLE DB Command Input]"
@@ -1812,7 +1812,7 @@ WHERE AQI_ID=?</property>
               startId="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\AIR_QUALITY - TO NDS.Paths[OLE DB Source Output]"
-              endId="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces.Inputs[Derived Column Input]"
+              endId="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI.Outputs[OLE DB Source Output]" />
             <path
@@ -3746,7 +3746,7 @@ where [refTable].[STATE_ID] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">2</property>
+                  typeConverter="CacheType">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -4641,15 +4641,15 @@ WHERE STATE_ID_SK=?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="194.4,41.6"
+          Size="193.6,41.6"
           Id="Package\AIR_QUALITY - TO NDS"
           TopLeft="245.833319901593,110.933332561917" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="169.6,41.6"
           Id="Package\COUNTY - TO NDS"
           TopLeft="258.333319218623,35.533333086239" />
         <NodeLayout
-          Size="160,41.6"
+          Size="156.8,41.6"
           Id="Package\STATE - TO NDS"
           TopLeft="57.4999968583387,34.666666425599" />
         <NodeLayout
@@ -4658,18 +4658,18 @@ WHERE STATE_ID_SK=?</property>
           TopLeft="221.666654555334,192.399998662074" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="217.499996858339,55.899999755919">
+          TopLeft="214.299996858339,55.899999755919">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="40.8333223602842,0"
+              EndConnector="44.0333223602843,0"
               Start="0,0"
-              End="33.3333223602842,0">
+              End="36.5333223602843,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="33.3333223602842,0" />
+                    End="36.5333223602843,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4731,37 +4731,37 @@ WHERE STATE_ID_SK=?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="342.4,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists"
-          TopLeft="200.282814150107,185.451850896028" />
-        <NodeLayout
-          Size="337.6,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\Lookup COUNTY_ID from STATE_NAME and COUNTY"
-          TopLeft="376.777770165492,94.9501661243537" />
-        <NodeLayout
-          Size="293.6,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs"
-          TopLeft="33.8905651708434,95.2094261042183" />
-        <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI"
-          TopLeft="27.7777762600669,22.5501680019" />
-        <NodeLayout
           Size="191.2,41.6"
           Id="Package\AIR_QUALITY - TO NDS\UPDATE matching entry"
           TopLeft="132.149486462657,271.518517158907" />
+        <NodeLayout
+          Size="331.2,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\Convert DATE to DB_DATE, and TRIM trailling spaces"
+          TopLeft="254.467991964,21.1851850378661" />
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY"
           TopLeft="695.482789016816,271.733331777519" />
         <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\AIR_QUALITY - TO NDS\TRIM trailing spaces"
-          TopLeft="254.467991964,21.1851850378661" />
+          Size="294.4,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\Sort by (STATE_NAME, COUNTY_NAME), and remove dups from different srcs"
+          TopLeft="33.8905651708434,95.2094261042183" />
+        <NodeLayout
+          Size="342.4,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists"
+          TopLeft="200.282814150107,185.451850896028" />
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI"
+          TopLeft="27.7777762600669,22.5501680019" />
         <NodeLayout
           Size="275.2,41.6"
           Id="Package\AIR_QUALITY - TO NDS\Add CREATED and LAST_UPDATED cols"
           TopLeft="382.149472803261,269.718517176987" />
+        <NodeLayout
+          Size="337.6,41.6"
+          Id="Package\AIR_QUALITY - TO NDS\Lookup COUNTY_ID from STATE_NAME and COUNTY"
+          TopLeft="376.777770165492,94.9501661243537" />
         <EdgeLayout
           Id="Package\AIR_QUALITY - TO NDS.Paths[Sort Output]"
           TopLeft="327.490565170843,115.879796114286">
@@ -4786,18 +4786,18 @@ WHERE STATE_ID_SK=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\AIR_QUALITY - TO NDS.Paths[OLE DB Source Output]"
-          TopLeft="224.577776260067,42.6676765198831">
+          TopLeft="224.777776260067,42.867676519883">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.8902157039329,0"
+              EndConnector="29.6902157039331,0"
               Start="0,0"
-              End="22.3902157039329,0">
+              End="22.1902157039331,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="22.3902157039329,0" />
+                    End="22.1902157039331,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4916,30 +4916,30 @@ WHERE STATE_ID_SK=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\AIR_QUALITY - TO NDS.Paths[Derived Column Output1]"
-          TopLeft="340.867991964,62.785185037866">
+          TopLeft="419.967991964,63.1851850378661">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-160.177426793156,32.4242410663523"
+              EndConnector="-239.077426793157,32.0242410663522"
               Start="0,0"
-              End="-160.177426793156,24.9242410663523">
+              End="-239.077426793157,24.5242410663522">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.2121205331762" />
+                    End="0,12.0121205331761" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.2121205331762"
-                    Point2="0,16.2121205331762"
-                    Point3="-4,16.2121205331762" />
+                    Point1="0,12.0121205331761"
+                    Point2="0,16.0121205331761"
+                    Point3="-4,16.0121205331761" />
                   <mssgle:LineSegment
-                    End="-156.177426793156,16.2121205331762" />
+                    End="-235.077426793157,16.0121205331761" />
                   <mssgle:CubicBezierSegment
-                    Point1="-156.177426793156,16.2121205331762"
-                    Point2="-160.177426793156,16.2121205331762"
-                    Point3="-160.177426793156,20.2121205331762" />
+                    Point1="-235.077426793157,16.0121205331761"
+                    Point2="-239.077426793157,16.0121205331761"
+                    Point3="-239.077426793157,20.0121205331761" />
                   <mssgle:LineSegment
-                    End="-160.177426793156,24.9242410663523" />
+                    End="-239.077426793157,24.5242410663522" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4974,30 +4974,7 @@ WHERE STATE_ID_SK=?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[AIR_QUALITY]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI">
+    design-time-name="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5010,7 +4987,30 @@ WHERE STATE_ID_SK=?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\AIR_QUALITY - TO NDS\NDS - AIR_QUALITY">
+    design-time-name="Package\AIR_QUALITY - TO NDS\If (COUNTY_ID, DATE, DEFINING_PARAMETER) exists">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[AIR_QUALITY]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AIR_QUALITY - TO NDS\STAGE - 10_STATE_AQI">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5374,13 +5374,13 @@ WHERE STATE_ID_SK=?</property>
           Id="Package\STATE - TO NDS\NDS - STATE"
           TopLeft="524.999971116584,270.533331237502" />
         <NodeLayout
-          Size="346.4,41.6"
+          Size="345.6,41.6"
           Id="Package\STATE - TO NDS\UPDATE STATE_NAME, LAST_UPDATED, SOURCE_ID"
           TopLeft="55.8333300840524,264.466664613022" />
         <NodeLayout
           Size="209.6,41.6"
           Id="Package\STATE - TO NDS\STAGE - 2B_USCOUNTIES"
-          TopLeft="92.4999949460229,28.5999998011192" />
+          TopLeft="73.9285663350606,4.12941158727449" />
         <EdgeLayout
           Id="Package\STATE - TO NDS.Paths[Sort Output]"
           TopLeft="529.416653257691,69.3333331404792">
@@ -5400,33 +5400,41 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STATE - TO NDS.Paths[OLE DB Source Output]"
-          TopLeft="302.099994946023,48.9666664707992">
+          TopLeft="283.528566335061,24.9294115872745">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="68.7333181258711,0"
+              EndConnector="87.3047467368334,23.6039215532047"
               Start="0,0"
-              End="61.2333181258711,0">
+              End="79.8047467368334,23.6039215532047">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="61.2333181258711,0" />
+                    End="39.6523733684167,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.6523733684167,0"
+                    Point2="43.6523733684167,0"
+                    Point3="43.6523733684167,4" />
+                  <mssgle:LineSegment
+                    End="43.6523733684167,19.6039215532047" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.6523733684167,19.6039215532047"
+                    Point2="43.6523733684167,23.6039215532047"
+                    Point3="47.6523733684167,23.6039215532047" />
+                  <mssgle:LineSegment
+                    End="79.8047467368334,23.6039215532047" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5508,9 +5516,7 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5532,9 +5538,7 @@ WHERE STATE_ID_SK=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

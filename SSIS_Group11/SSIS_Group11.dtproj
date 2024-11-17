@@ -201,6 +201,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -396,6 +398,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -733,10 +737,10 @@
                 <SSIS:Property SSIS:Name="Name">Stage_NDS</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">114</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">115</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E46B4CEB-D6A5-4D58-8C01-73EFEBD3F478}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2E948438-E85C-4461-9CE1-654ED4A3121D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -769,7 +773,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=.;Initial Catalog=21BI11_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{02D54EDC-06FA-467E-835F-EF84EEE2AC17}LocalHost.21BI11_METADATA;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=.;Initial Catalog=21BI11_METADATA;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{02D54EDC-06FA-467E-835F-EF84EEE2AC17}LocalHost.21BI11_METADATA;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1065,7 +1069,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=.;Initial Catalog=21BI11_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{9BF00C62-02A4-4DDA-8EBA-0D6DD65B07B6}LocalHost.21BI11_STAGE;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=.;Initial Catalog=21BI11_STAGE;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Stage_NDS-{9BF00C62-02A4-4DDA-8EBA-0D6DD65B07B6}LocalHost.21BI11_STAGE;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1195,10 +1199,10 @@
                 <SSIS:Property SSIS:Name="Name">NDS_DDS</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">37</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0F42A209-91EF-4D33-B3FE-6B9AFCF781F0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{96C3FEAF-7D71-4884-BA72-1FEAFC7C3124}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1379,7 +1383,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=.;Initial Catalog=21BI11_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-NDS_DDS-{37FB2D24-0771-4411-BD52-72485A581117}LocalHost.21BI11_METADATA;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=.;Initial Catalog=21BI11_METADATA;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-NDS_DDS-{37FB2D24-0771-4411-BD52-72485A581117}LocalHost.21BI11_METADATA;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
