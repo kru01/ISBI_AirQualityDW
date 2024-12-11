@@ -52,6 +52,9 @@ Regarding our setup,
 1. For `SSAS`, double-click `21BI11 DDS.ds` in the `Solution Explorer`, navigate to the `Impersonation Information` tab then change the Windows `User name` and `Password`.
     1. Be aware that this is the password associated with your **Microsoft account** (or the personal `Outlook` mail in our case), _not whatever PIN or password for the Windows Lock Screen._
 
+1. For `Data Mining`, run `6_target.sql`. This should only be process after completed all previous work.
+ 
+
 ## Usage
 
 All processes and possible usages of our work are detailed thoroughly in the [Report](./Docs/Report.pdf), so give it a read for starters, _or just poke around since the project is pretty straightforward_.

@@ -1,0 +1,108 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="81a018c2-ac7d-4c32-8b41-a9d3e5ac0e97" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>21BI11 MINING</ID>
+  <Name>21BI11 MINING</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>21BI11 DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="_x0032_1BI11_x0020_MINING" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="_x0032_1BI11_x0020_MINING" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="92bcce2f-5713-43af-a413-5ffb8481a586">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_MINING_AIR_QUALITY" msprop:design-time-name="da04ff5a-d223-4400-9c14-2f8ea9098947" msprop:DbTableName="MINING_AIR_QUALITY" msprop:FriendlyName="MINING_AIR_QUALITY" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AQI_ID" msprop:design-time-name="04e8491e-82b5-41ff-bea5-c620b3b3054a" msprop:DbColumnName="AQI_ID" msprop:FriendlyName="AQI_ID" type="xs:int" />
+                  <xs:element name="GEO_ID" msprop:design-time-name="b72ab615-5ab9-498b-a307-ae0cf5fc83fa" msprop:DbColumnName="GEO_ID" msprop:FriendlyName="GEO_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATE_ID" msprop:design-time-name="84a973eb-d1ba-4457-aea6-76f75d780f0b" msprop:DbColumnName="DATE_ID" msprop:FriendlyName="DATE_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="AQI" msprop:design-time-name="503d1452-b30e-48fc-aeca-6483eea7afe7" msprop:DbColumnName="AQI" msprop:FriendlyName="AQI" type="xs:int" minOccurs="0" />
+                  <xs:element name="CATEGORY" msprop:design-time-name="2d4df0b7-ba92-44f4-80bf-dc130ce0abb0" msprop:DbColumnName="CATEGORY" msprop:FriendlyName="CATEGORY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEFINING_PARAMETER" msprop:design-time-name="229e1860-0ac6-4538-8ab0-1e1cf761f9c4" msprop:DbColumnName="DEFINING_PARAMETER" msprop:FriendlyName="DEFINING_PARAMETER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEFINING_SITE" msprop:design-time-name="46d785cc-1eb4-4e15-a4f5-6c8391ac2d2d" msprop:DbColumnName="DEFINING_SITE" msprop:FriendlyName="DEFINING_SITE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMBER_OF_SITES_REPORTING" msprop:design-time-name="51b49c08-5b4d-4077-8e8e-3c722832a662" msprop:DbColumnName="NUMBER_OF_SITES_REPORTING" msprop:FriendlyName="NUMBER_OF_SITES_REPORTING" type="xs:int" minOccurs="0" />
+                  <xs:element name="STATE_NAME" msprop:design-time-name="3f4f218a-02ab-4500-9522-663d1b44679b" msprop:DbColumnName="STATE_NAME" msprop:FriendlyName="STATE_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COUNTY" msprop:design-time-name="8c8d4464-ce38-472d-907a-15ae49842099" msprop:DbColumnName="COUNTY" msprop:FriendlyName="COUNTY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="YEAR" msprop:design-time-name="8f56bbeb-61ba-4e7b-b67c-dad1032fd568" msprop:DbColumnName="YEAR" msprop:FriendlyName="YEAR" type="xs:int" minOccurs="0" />
+                  <xs:element name="QUARTER" msprop:design-time-name="e846e220-a32c-4c73-8675-44aef47ac6a7" msprop:DbColumnName="QUARTER" msprop:FriendlyName="QUARTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH" msprop:design-time-name="ac8914a7-26bd-4722-959d-edfa2718256a" msprop:DbColumnName="MONTH" msprop:FriendlyName="MONTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAY" msprop:design-time-name="64de1a46-4e3c-4c60-8d82-aa525fdab24e" msprop:DbColumnName="DAY" msprop:FriendlyName="DAY" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_MINING_AIR_QUALITY" />
+          <xs:field xpath="AQI_ID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <_x0032_1BI11_x0020_MINING xmlns="" />
+  </Schema>
+</DataSourceView>
