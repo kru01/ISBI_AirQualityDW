@@ -12,8 +12,8 @@
   DTS:ObjectName="Stage_NDS"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{85EA30EF-EEDD-4F59-885B-0DC724B729E8}">
+  DTS:VersionBuild="120"
+  DTS:VersionGUID="{57330FE7-4493-4D04-8FE6-16F1F240474E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4645,31 +4645,31 @@ WHERE STATE_ID_SK=?</property>
           Id="Package\AIR_QUALITY - TO NDS"
           TopLeft="245.833319901593,110.933332561917" />
         <NodeLayout
-          Size="169.6,41.6"
+          Size="170.4,41.6"
           Id="Package\COUNTY - TO NDS"
           TopLeft="258.333319218623,35.533333086239" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="167.2,41.6"
           Id="Package\STATE - TO NDS"
-          TopLeft="57.4999968583387,34.666666425599" />
+          TopLeft="46.6666641169126,34.666666425599" />
         <NodeLayout
           Size="255.2,41.6"
           Id="Package\UPDATE LSET for NDS's METADATA"
           TopLeft="221.666654555334,192.399998662074" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="214.299996858339,55.899999755919">
+          TopLeft="213.866664116913,55.899999755919">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="44.0333223602843,0"
+              EndConnector="44.4666551017105,0"
               Start="0,0"
-              End="36.5333223602843,0">
+              End="36.9666551017105,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="36.5333223602843,0" />
+                    End="36.9666551017105,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4680,7 +4680,7 @@ WHERE STATE_ID_SK=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="343.283319560108,77.133333086239">
+          TopLeft="343.083319560108,77.133333086239">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -5356,7 +5356,7 @@ WHERE STATE_ID_SK=?</property>
         <NodeLayout
           Size="323.2,41.6"
           Id="Package\STATE - TO NDS\Remove duplicated STATE_ID from different sources"
-          TopLeft="370.833313071894,27.7333331404792" />
+          TopLeft="370.833313071894,24.2666664979193" />
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\STATE - TO NDS\If STATE_ID exists"
@@ -5380,21 +5380,21 @@ WHERE STATE_ID_SK=?</property>
         <NodeLayout
           Size="209.6,41.6"
           Id="Package\STATE - TO NDS\STAGE - 2B_USCOUNTIES"
-          TopLeft="73.9285663350606,4.12941158727449" />
+          TopLeft="113.928564149557,26.6627447639138" />
         <EdgeLayout
           Id="Package\STATE - TO NDS.Paths[Sort Output]"
-          TopLeft="529.416653257691,69.3333331404792">
+          TopLeft="529.416653257691,65.8666664979193">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,22.666665488614"
+              EndConnector="0,26.1333321311739"
               Start="0,0"
-              End="0,15.166665488614">
+              End="0,18.6333321311739">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.166665488614" />
+                    End="0,18.6333321311739" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5405,30 +5405,18 @@ WHERE STATE_ID_SK=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STATE - TO NDS.Paths[OLE DB Source Output]"
-          TopLeft="283.528566335061,24.9294115872745">
+          TopLeft="323.528564149557,46.2647056309166">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87.3047467368334,23.6039215532047"
+              EndConnector="47.3047489223368,0"
               Start="0,0"
-              End="79.8047467368334,23.6039215532047">
+              End="39.8047489223368,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="39.6523733684167,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="39.6523733684167,0"
-                    Point2="43.6523733684167,0"
-                    Point3="43.6523733684167,4" />
-                  <mssgle:LineSegment
-                    End="43.6523733684167,19.6039215532047" />
-                  <mssgle:CubicBezierSegment
-                    Point1="43.6523733684167,19.6039215532047"
-                    Point2="43.6523733684167,23.6039215532047"
-                    Point3="47.6523733684167,23.6039215532047" />
-                  <mssgle:LineSegment
-                    End="79.8047467368334,23.6039215532047" />
+                    End="39.8047489223368,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

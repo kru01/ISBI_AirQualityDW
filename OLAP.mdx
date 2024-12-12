@@ -85,17 +85,14 @@ WHERE [Measures].[AVG AQI];
  */
 SELECT
     NON EMPTY
-        {
-            [DIM GEO].[STATE NAME].&[Hawaii],
-            [DIM GEO].[STATE NAME].&[Alaska],
-            [DIM GEO].[STATE NAME].&[Illinois],
-            [DIM GEO].[STATE NAME].&[California]
-        } ON ROWS, -- States on rows
+        {[DIM GEO].[STATE NAME].&[Hawaii],
+         [DIM GEO].[STATE NAME].&[Alaska],
+         [DIM GEO].[STATE NAME].&[Illinois],
+         [DIM GEO].[STATE NAME].&[California]} ON ROWS,
     NON EMPTY
-        [DIM DATE].[YEAR].[YEAR] ON COLUMNS -- Years on columns
+        [DIM DATE].[YEAR].[YEAR] ON COLUMNS
 FROM [21BI11 DDS]
 WHERE [Measures].[AVG AQI];
-
 
 /* 7. Build graphs/charts for the above reports.
  */
